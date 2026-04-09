@@ -1,0 +1,20 @@
+[
+  {
+    "doc_id": "a802c5fba7e7",
+    "source_file": "MATA 621 Applied Ordinary Dif Equations Spring 2026.pdf",
+    "text_json": "/content/drive/MyDrive/CLASS_AlignED_MVP/processed/text/a802c5fba7e7.json",
+    "chunks_jsonl": "/content/drive/MyDrive/CLASS_AlignED_MVP/processed/chunks/a802c5fba7e7.jsonl"
+  },
+  {
+    "doc_id": "c3effd7fac1b",
+    "source_file": "Nutrition Syllabus Spring 2026-1.docx",
+    "text_json": "/content/drive/MyDrive/CLASS_AlignED_MVP/processed/text/c3effd7fac1b.json",
+    "chunks_jsonl": "/content/drive/MyDrive/CLASS_AlignED_MVP/processed/chunks/c3effd7fac1b.jsonl"
+  },
+  {
+    "doc_id": "93652df9ef57",
+    "source_file": "Principles of Immunology.pdf",
+    "text_json": "/content/drive/MyDrive/CLASS_AlignED_MVP/processed/text/93652df9ef57.json",
+    "chunks_jsonl": "/content/drive/MyDrive/CLASS_AlignED_MVP/processed/chunks/93652df9ef57.jsonl"
+  }
+]

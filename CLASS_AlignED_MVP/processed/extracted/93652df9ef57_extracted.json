@@ -1,0 +1,757 @@
+{
+  "doc_id": "93652df9ef57",
+  "course": {
+    "title": "Principles of Immunology",
+    "code": "BIOL 443, Section D3",
+    "term": "Spring 2026"
+  },
+  "learning_outcomes": [
+    {
+      "id": "LO1",
+      "text": "Identify and describe the principal components of the human immune system.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "id": "LO2",
+      "text": "Differentiate between innate and acquired immunity.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "id": "LO3",
+      "text": "Discuss the role of Phagocytes, T cells, B cells, Complement system, MHC, Immune receptors and Immune Signaling compounds in the immune response.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "id": "LO4",
+      "text": "Explain the basic immunological concept behind vaccines, allergic reactions, autoimmune responses and Cancer.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "id": "LO5",
+      "text": "Apply the concepts learned in the course to the study of the development of Covid-19 infections, treatment and vaccine development.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "A1",
+      "name": "Exams",
+      "weight_percent": 40,
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "Midterm Exam",
+      "weight_percent": 10,
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "A3",
+      "name": "Laboratory Reports",
+      "weight_percent": 10,
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "A4",
+      "name": "Wikki – Covid-19",
+      "weight_percent": 20,
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "A5",
+      "name": "Participation",
+      "weight_percent": 10,
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "A6",
+      "name": "Final Exam",
+      "weight_percent": 10,
+      "evidence": [
+        "9312e459d00c"
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "id": "P1",
+      "type": "Submission Policy",
+      "summary": "Assignments submitted via e-mail without prior permission from the professor will not be graded.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "id": "P2",
+      "type": "Participation and Attendance Policy",
+      "summary": "Participation is assessed based on prompt assignment completion and adherence to due dates. Attendance is based on the last date of course access via Blackboard, with students expected to access the course at least once a week. Accommodations for absences require communication within 48 hours and potential evidence.",
+      "evidence": [
+        "0b8d6d7ca75e",
+        "234a01a7d5bd"
+      ]
+    },
+    {
+      "id": "P3",
+      "type": "Academic Integrity",
+      "summary": "Participation in Discussion Boards, Journals, or Assignments must be original work. Material from other sources must be properly referenced.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "id": "P4",
+      "type": "Late Assignment Policy",
+      "summary": "Late assignments are accepted until the last day of class, but incur a 25% penalty of the total point value for every week they are late.",
+      "evidence": [
+        "234a01a7d5bd"
+      ]
+    },
+    {
+      "id": "P5",
+      "type": "Netiquette Guidelines",
+      "summary": "Students are expected to maintain a civil online environment, including writing concisely, avoiding all caps, using emoticons/humor carefully, assuming best intentions, respecting differences, and choosing kind language.",
+      "evidence": [
+        "234a01a7d5bd"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "id": "T1",
+      "name": "Immunology by Richard A. Goldsby, et al. (7th ed.) 2013",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "id": "T2",
+      "name": "Blackboard course delivery system",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "T3",
+      "name": "Computer/Laptop/Tablet",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "T4",
+      "name": "High Speed Internet connection or 4G Unlimited Data Plan",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "T5",
+      "name": "Web browser",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "T6",
+      "name": "Microsoft Office (Word, Excel, PowerPoint)",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "T7",
+      "name": "ZOOM",
+      "evidence": [
+        "461692a505cc"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source_id": "course",
+      "target_id": "LO1",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "The course aims for students to achieve this learning outcome.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "LO2",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "The course aims for students to achieve this learning outcome.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "LO3",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "The course aims for students to achieve this learning outcome.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "LO4",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "The course aims for students to achieve this learning outcome.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "LO5",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "The course aims for students to achieve this learning outcome.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "A1",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "This assessment is a graded component of the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "A2",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "This assessment is a graded component of the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "A3",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "This assessment is a graded component of the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "A4",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "This assessment is a graded component of the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "A5",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "This assessment is a graded component of the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "A6",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "This assessment is a graded component of the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "T1",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "This tool/material is required for the course.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "T2",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "This tool/material is required for the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "T3",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "This tool/material is required for the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "T4",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "This tool/material is required for the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "T5",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "This tool/material is required for the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "T6",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "This tool/material is required for the course.",
+      "evidence": [
+        "9312e459d00c"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "T7",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "This tool/material is required for the course.",
+      "evidence": [
+        "461692a505cc"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "P1",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "This policy governs student conduct and expectations within the course.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "P2",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "This policy governs student conduct and expectations within the course.",
+      "evidence": [
+        "0b8d6d7ca75e",
+        "234a01a7d5bd"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "P3",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "This policy governs student conduct and expectations within the course.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "P4",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "This policy governs student conduct and expectations within the course.",
+      "evidence": [
+        "234a01a7d5bd"
+      ]
+    },
+    {
+      "source_id": "course",
+      "target_id": "P5",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "This policy governs student conduct and expectations within the course.",
+      "evidence": [
+        "234a01a7d5bd"
+      ]
+    },
+    {
+      "source_id": "A1",
+      "target_id": "LO1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Unit exams contributing to 'Exams' (A1) explicitly align with these outcomes.",
+      "evidence": [
+        "9312e459d00c",
+        "45b2de5d2640",
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A1",
+      "target_id": "LO2",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Unit exams contributing to 'Exams' (A1) explicitly align with these outcomes.",
+      "evidence": [
+        "9312e459d00c",
+        "45b2de5d2640"
+      ]
+    },
+    {
+      "source_id": "A1",
+      "target_id": "LO3",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Unit exams contributing to 'Exams' (A1) explicitly align with these outcomes.",
+      "evidence": [
+        "9312e459d00c",
+        "45b2de5d2640"
+      ]
+    },
+    {
+      "source_id": "A1",
+      "target_id": "LO4",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Unit exams contributing to 'Exams' (A1) explicitly align with these outcomes.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A4",
+      "target_id": "LO1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The 'Journal for Covid-19 activity' (which is the Wikki) aligns with these outcomes.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A4",
+      "target_id": "LO5",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The 'Journal for Covid-19 activity' (which is the Wikki) aligns with these outcomes.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A5",
+      "target_id": "LO1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Participation includes quizzes and activities that align with these outcomes.",
+      "evidence": [
+        "9312e459d00c",
+        "45b2de5d2640",
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A5",
+      "target_id": "LO2",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Participation includes quizzes and activities that align with these outcomes.",
+      "evidence": [
+        "9312e459d00c",
+        "45b2de5d2640"
+      ]
+    },
+    {
+      "source_id": "A5",
+      "target_id": "LO3",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Participation includes quizzes and activities that align with these outcomes.",
+      "evidence": [
+        "9312e459d00c",
+        "45b2de5d2640"
+      ]
+    },
+    {
+      "source_id": "A5",
+      "target_id": "LO4",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Participation includes quizzes and activities that align with these outcomes.",
+      "evidence": [
+        "45b2de5d2640",
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A6",
+      "target_id": "LO1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Exam assesses all learning outcomes.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A6",
+      "target_id": "LO2",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Exam assesses all learning outcomes.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A6",
+      "target_id": "LO3",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Exam assesses all learning outcomes.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A6",
+      "target_id": "LO4",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Exam assesses all learning outcomes.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "source_id": "A6",
+      "target_id": "LO5",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Exam assesses all learning outcomes.",
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "REC1",
+      "title": "AI for Personalized Feedback on Complex Topics",
+      "description": "Utilize AI tools to provide instantaneous, personalized feedback on student assignments (e.g., essays, problem sets) covering complex immunological concepts, helping students to identify areas for improvement before instructor grading. This can augment the professor's feedback capacity.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "LO4"
+      ],
+      "constrained_by": [
+        "Transparency",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "AI generating incorrect or misleading feedback",
+        "Students over-relying on AI without critical thinking",
+        "Lack of human nuance in feedback"
+      ],
+      "mitigations": [
+        "Faculty must review and validate AI feedback mechanisms and outputs.",
+        "Students should be educated on AI limitations and encouraged to use it as a learning aid, not a definitive answer source.",
+        "Ensure AI feedback is supplementary to, not a replacement for, instructor feedback."
+      ],
+      "evidence": [
+        "461692a505cc",
+        "234a01a7d5bd"
+      ]
+    },
+    {
+      "id": "REC2",
+      "title": "AI-Assisted Plagiarism and Originality Detection",
+      "description": "Implement AI-powered tools to enhance the detection of plagiarism and ensure the originality of student work submitted in discussion boards, journals, and reports, supporting academic integrity policies.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "LO4",
+        "LO5"
+      ],
+      "constrained_by": [
+        "Integrity",
+        "Privacy",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "False positives leading to unfair accusations",
+        "Privacy concerns regarding student data submitted to AI tools",
+        "Over-reliance on AI without human discretion in academic integrity cases."
+      ],
+      "mitigations": [
+        "Combine AI detection with human review for all suspected cases.",
+        "Communicate clear policies to students about AI use in their own work and originality expectations.",
+        "Ensure robust data privacy protocols for any AI tool utilized."
+      ],
+      "evidence": [
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "id": "REC3",
+      "title": "AI Tools for Conceptual Explanation and Study Support",
+      "description": "Suggest specific, verified AI-powered resources (e.g., intelligent tutoring systems, explainers) that students can use to clarify complex immunological concepts, differentiate between similar terms, or prepare for exams, aiding their independent study.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "LO4",
+        "LO5"
+      ],
+      "constrained_by": [
+        "Transparency",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "AI generating inaccurate or misleading explanations",
+        "Students becoming overly dependent on AI, hindering critical thinking.",
+        "Students using AI to bypass understanding rather than enhance it."
+      ],
+      "mitigations": [
+        "Provide faculty-curated lists of recommended AI tools and guidelines for their effective use.",
+        "Teach students how to critically evaluate AI-generated information.",
+        "Design assessments that require application and synthesis of knowledge beyond simple recall achievable by AI."
+      ],
+      "evidence": [
+        "461692a505cc",
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "REC4",
+      "title": "AI for Diverse Assessment Question Generation",
+      "description": "Leverage AI to assist in generating a variety of assessment questions, including multiple-choice scenarios and essay prompts, for unit exams and quizzes, ensuring diverse coverage of learning outcomes and reducing question fatigue.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "LO4",
+        "LO5"
+      ],
+      "constrained_by": [
+        "FacultyAuthority",
+        "Accountability"
+      ],
+      "risks": [
+        "AI producing biased, irrelevant, or factually incorrect questions.",
+        "Loss of pedagogical alignment if AI is not guided effectively.",
+        "Over-reliance on AI for assessment design potentially leading to less creative or rigorous questions."
+      ],
+      "mitigations": [
+        "Faculty must thoroughly review, edit, and validate all AI-generated questions for accuracy, relevance, and alignment with learning outcomes.",
+        "Use AI as a brainstorming tool, not a final solution, for assessment design.",
+        "Regularly recalibrate AI prompts to ensure quality and prevent bias."
+      ],
+      "evidence": [
+        "9312e459d00c",
+        "461692a505cc"
+      ]
+    },
+    {
+      "id": "REC5",
+      "title": "AI-Powered Adaptive Learning Modules for Online Content",
+      "description": "Introduce AI-driven adaptive learning modules on Blackboard that can tailor content presentation and practice exercises based on individual student progress and mastery of concepts, especially beneficial for an online course with varied student paces.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "LO4",
+        "LO5"
+      ],
+      "constrained_by": [
+        "Transparency",
+        "Privacy",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Algorithmic bias in content delivery leading to inequitable learning experiences.",
+        "Privacy concerns related to tracking student learning data.",
+        "Students potentially missing broader perspectives if pathways are too narrow."
+      ],
+      "mitigations": [
+        "Ensure transparency with students about how adaptive learning works and what data is collected.",
+        "Allow faculty to curate and override AI recommendations.",
+        "Implement strong data privacy and security measures for all student learning analytics."
+      ],
+      "evidence": [
+        "9312e459d00c",
+        "461692a505cc",
+        "0b8d6d7ca75e"
+      ]
+    },
+    {
+      "id": "REC6",
+      "title": "AI for Content Summarization and Key Concept Extraction",
+      "description": "Encourage the responsible use of AI tools by students to summarize lengthy academic texts (e.g., textbook chapters, research articles) or extract key concepts from video lectures, helping them manage the significant volume of course material and focus their study.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "LO4",
+        "LO5"
+      ],
+      "constrained_by": [
+        "Transparency",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "AI generating inaccurate or incomplete summaries, leading to misunderstandings.",
+        "Students relying solely on summaries, bypassing critical reading and analytical skills development.",
+        "Potential for misinterpretation of nuances in complex scientific literature."
+      ],
+      "mitigations": [
+        "Educate students on critical evaluation of AI-generated summaries and cross-referencing with original sources.",
+        "Integrate assignments that require deep textual analysis, not just summarization.",
+        "Provide examples of effective and ineffective AI summarization to guide student use."
+      ],
+      "evidence": [
+        "461692a505cc",
+        "9312e459d00c"
+      ]
+    },
+    {
+      "id": "REC7",
+      "title": "AI-Powered Accessibility Enhancements",
+      "description": "Utilize AI capabilities (e.g., automated captioning for video lectures, text-to-speech for readings, translation tools) to improve the accessibility of course materials for students with diverse learning needs, aligning with inclusive teaching practices.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "LO4",
+        "LO5"
+      ],
+      "constrained_by": [
+        "Accountability",
+        "Transparency",
+        "Privacy"
+      ],
+      "risks": [
+        "Inaccurate or incomplete AI-generated accessibility features (e.g., captions).",
+        "Privacy concerns if personal data is processed by third-party AI accessibility tools.",
+        "AI solutions not fully meeting the specific needs of all students with disabilities."
+      ],
+      "mitigations": [
+        "Routinely review and manually correct AI-generated accessibility features for accuracy.",
+        "Prioritize tools with robust privacy policies and secure data handling.",
+        "Offer multiple avenues for accessibility support and encourage students to communicate specific needs for accommodations."
+      ],
+      "evidence": [
+        "9312e459d00c",
+        "234a01a7d5bd"
+      ]
+    }
+  ]
+}

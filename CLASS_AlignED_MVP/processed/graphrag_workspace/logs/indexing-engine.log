@@ -1,0 +1,2182 @@
+2026-03-18 16:12:05.0158 - ERROR - graphrag_llm.middleware.with_logging - Request failed with exception=litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: <AIzaSyA*****************************oz8>. You can find your API key at https://platform.openai.com/account/api-keys.
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 851, in completion
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 779, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        openai_client=openai_client,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        logging_obj=logging_obj,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/logging_utils.py", line 344, in sync_wrapper
+    result = func(*args, **kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 502, in make_sync_openai_chat_completion_request
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 477, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(
+        **data, timeout=timeout
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/openai/resources/chat/completions/completions.py", line 1211, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: <AIzaSyA*****************************oz8>. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 2695, in completion
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 2667, in completion
+    response = openai_chat_completions.completion(
+        model=model,
+    ...<16 lines>...
+        shared_session=shared_session,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/openai/openai.py", line 862, in completion
+    raise OpenAIError(
+    ...<4 lines>...
+    )
+litellm.llms.openai.common_utils.OpenAIError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: <AIzaSyA*****************************oz8>. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 49, in _request_count_middleware
+    return sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 53, in _request_count_middleware
+    result = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 47, in _retry_middleware
+    return retrier.retry(
+           ~~~~~~~~~~~~~^
+        func=sync_middleware,
+        ^^^^^^^^^^^^^^^^^^^^^
+        input_args=kwargs,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 70, in retry
+    return func(**input_args)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 56, in _metrics_middleware
+    response = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 264, in _base_completion
+    response = litellm.completion(
+        **new_args,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1775, in wrapper
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1596, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 4408, in completion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 543, in exception_type
+    raise AuthenticationError(
+    ...<5 lines>...
+    )
+litellm.exceptions.AuthenticationError: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: <AIzaSyA*****************************oz8>. You can find your API key at https://platform.openai.com/account/api-keys.
+2026-03-18 16:12:05.0169 - ERROR - graphrag.index.validate_config - LLM configuration error detected.
+litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: <AIzaSyA*****************************oz8>. You can find your API key at https://platform.openai.com/account/api-keys.
+2026-03-18 16:12:05.0169 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for openai/gpt-4.1-mini: {
+  "attempted_request_count": 1,
+  "successful_response_count": 0,
+  "failed_response_count": 1,
+  "failure_rate": 1.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-03-18 18:15:15.0779 - ERROR - graphrag_llm.middleware.with_logging - Request failed with exception=litellm.AuthenticationError: GeminiException - {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2880, in completion
+    response = client.post(url=url, headers=headers, json=data, logging_obj=logging_obj)  # type: ignore
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1047, in post
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1029, in post
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=%3CAIzaSyAqj87-0LAsM1hK3fZzviCVLqzdSYdBoz8%3E'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 3439, in completion
+    response = vertex_chat_completion.completion(  # type: ignore
+        model=model,
+    ...<17 lines>...
+        extra_headers=headers,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2884, in completion
+    raise VertexAIError(
+    ...<3 lines>...
+    )
+litellm.llms.vertex_ai.common_utils.VertexAIError: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 49, in _request_count_middleware
+    return sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 53, in _request_count_middleware
+    result = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 47, in _retry_middleware
+    return retrier.retry(
+           ~~~~~~~~~~~~~^
+        func=sync_middleware,
+        ^^^^^^^^^^^^^^^^^^^^^
+        input_args=kwargs,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 70, in retry
+    return func(**input_args)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 56, in _metrics_middleware
+    response = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 264, in _base_completion
+    response = litellm.completion(
+        **new_args,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1775, in wrapper
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1596, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 4408, in completion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1340, in exception_type
+    raise AuthenticationError(
+    ...<4 lines>...
+    )
+litellm.exceptions.AuthenticationError: litellm.AuthenticationError: GeminiException - {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2026-03-18 18:15:15.0788 - ERROR - graphrag.index.validate_config - LLM configuration error detected.
+litellm.AuthenticationError: GeminiException - {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2026-03-18 18:15:15.0789 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini-2.5-flash: {
+  "attempted_request_count": 1,
+  "successful_response_count": 0,
+  "failed_response_count": 1,
+  "failure_rate": 1.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-03-18 18:16:08.0854 - ERROR - graphrag_llm.middleware.with_logging - Request failed with exception=litellm.AuthenticationError: GeminiException - {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2880, in completion
+    response = client.post(url=url, headers=headers, json=data, logging_obj=logging_obj)  # type: ignore
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1047, in post
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1029, in post
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=%3CAIzaSyAqj87-0LAsM1hK3fZzviCVLqzdSYdBoz8%3E'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 3439, in completion
+    response = vertex_chat_completion.completion(  # type: ignore
+        model=model,
+    ...<17 lines>...
+        extra_headers=headers,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2884, in completion
+    raise VertexAIError(
+    ...<3 lines>...
+    )
+litellm.llms.vertex_ai.common_utils.VertexAIError: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 49, in _request_count_middleware
+    return sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 53, in _request_count_middleware
+    result = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 47, in _retry_middleware
+    return retrier.retry(
+           ~~~~~~~~~~~~~^
+        func=sync_middleware,
+        ^^^^^^^^^^^^^^^^^^^^^
+        input_args=kwargs,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 70, in retry
+    return func(**input_args)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 56, in _metrics_middleware
+    response = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 264, in _base_completion
+    response = litellm.completion(
+        **new_args,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1775, in wrapper
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1596, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 4408, in completion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1340, in exception_type
+    raise AuthenticationError(
+    ...<4 lines>...
+    )
+litellm.exceptions.AuthenticationError: litellm.AuthenticationError: GeminiException - {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2026-03-18 18:16:08.0863 - ERROR - graphrag.index.validate_config - LLM configuration error detected.
+litellm.AuthenticationError: GeminiException - {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "API_KEY_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "API key not valid. Please pass a valid API key."
+      }
+    ]
+  }
+}
+
+2026-03-18 18:16:08.0863 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini-2.5-flash: {
+  "attempted_request_count": 1,
+  "successful_response_count": 0,
+  "failed_response_count": 1,
+  "failure_rate": 1.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-03-18 19:27:49.0843 - ERROR - graphrag_llm.middleware.with_logging - Request failed with exception=litellm.NotFoundError: GeminiException - 
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2880, in completion
+    response = client.post(url=url, headers=headers, json=data, logging_obj=logging_obj)  # type: ignore
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1047, in post
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1029, in post
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini/gemini-2.5-flash:generateContent?key=AIzaSyAqj87-0LAsM1hK3fZzviCVLqzdSYdBoz8'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 3439, in completion
+    response = vertex_chat_completion.completion(  # type: ignore
+        model=model,
+    ...<17 lines>...
+        extra_headers=headers,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2884, in completion
+    raise VertexAIError(
+    ...<3 lines>...
+    )
+litellm.llms.vertex_ai.common_utils.VertexAIError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 49, in _request_count_middleware
+    return sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 53, in _request_count_middleware
+    result = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 47, in _retry_middleware
+    return retrier.retry(
+           ~~~~~~~~~~~~~^
+        func=sync_middleware,
+        ^^^^^^^^^^^^^^^^^^^^^
+        input_args=kwargs,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 70, in retry
+    return func(**input_args)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 56, in _metrics_middleware
+    response = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 264, in _base_completion
+    response = litellm.completion(
+        **new_args,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1775, in wrapper
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1596, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 4408, in completion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1452, in exception_type
+    raise NotFoundError(
+    ...<3 lines>...
+    )
+litellm.exceptions.NotFoundError: litellm.NotFoundError: GeminiException - 
+2026-03-18 19:27:51.0189 - ERROR - graphrag.index.validate_config - LLM configuration error detected.
+litellm.NotFoundError: GeminiException - 
+2026-03-18 19:27:51.0191 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini/gemini-2.5-flash: {
+  "attempted_request_count": 1,
+  "successful_response_count": 0,
+  "failed_response_count": 1,
+  "failure_rate": 1.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-03-18 19:39:52.0200 - ERROR - graphrag_llm.middleware.with_logging - Request failed with exception=litellm.NotFoundError: GeminiException - 
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2880, in completion
+    response = client.post(url=url, headers=headers, json=data, logging_obj=logging_obj)  # type: ignore
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1047, in post
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1029, in post
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini/gemini-2.5-flash:generateContent?key=AIzaSyAqj87-0LAsM1hK3fZzviCVLqzdSYdBoz8'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 3439, in completion
+    response = vertex_chat_completion.completion(  # type: ignore
+        model=model,
+    ...<17 lines>...
+        extra_headers=headers,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2884, in completion
+    raise VertexAIError(
+    ...<3 lines>...
+    )
+litellm.llms.vertex_ai.common_utils.VertexAIError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 49, in _request_count_middleware
+    return sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 53, in _request_count_middleware
+    result = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 47, in _retry_middleware
+    return retrier.retry(
+           ~~~~~~~~~~~~~^
+        func=sync_middleware,
+        ^^^^^^^^^^^^^^^^^^^^^
+        input_args=kwargs,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 70, in retry
+    return func(**input_args)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 56, in _metrics_middleware
+    response = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 264, in _base_completion
+    response = litellm.completion(
+        **new_args,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1775, in wrapper
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1596, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 4408, in completion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1452, in exception_type
+    raise NotFoundError(
+    ...<3 lines>...
+    )
+litellm.exceptions.NotFoundError: litellm.NotFoundError: GeminiException - 
+2026-03-18 19:39:52.0209 - ERROR - graphrag.index.validate_config - LLM configuration error detected.
+litellm.NotFoundError: GeminiException - 
+2026-03-18 19:39:52.0210 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini/gemini-2.5-flash: {
+  "attempted_request_count": 1,
+  "successful_response_count": 0,
+  "failed_response_count": 1,
+  "failure_rate": 1.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-03-18 19:44:48.0107 - ERROR - graphrag_llm.middleware.with_logging - Request failed with exception=litellm.NotFoundError: GeminiException - 
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2880, in completion
+    response = client.post(url=url, headers=headers, json=data, logging_obj=logging_obj)  # type: ignore
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1047, in post
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1029, in post
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini/gemini-2.5-lite:generateContent?key=AIzaSyAqj87-0LAsM1hK3fZzviCVLqzdSYdBoz8'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 3439, in completion
+    response = vertex_chat_completion.completion(  # type: ignore
+        model=model,
+    ...<17 lines>...
+        extra_headers=headers,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2884, in completion
+    raise VertexAIError(
+    ...<3 lines>...
+    )
+litellm.llms.vertex_ai.common_utils.VertexAIError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 49, in _request_count_middleware
+    return sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 53, in _request_count_middleware
+    result = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 47, in _retry_middleware
+    return retrier.retry(
+           ~~~~~~~~~~~~~^
+        func=sync_middleware,
+        ^^^^^^^^^^^^^^^^^^^^^
+        input_args=kwargs,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 70, in retry
+    return func(**input_args)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 56, in _metrics_middleware
+    response = sync_middleware(**kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 264, in _base_completion
+    response = litellm.completion(
+        **new_args,
+    )
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1775, in wrapper
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1596, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 4408, in completion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1452, in exception_type
+    raise NotFoundError(
+    ...<3 lines>...
+    )
+litellm.exceptions.NotFoundError: litellm.NotFoundError: GeminiException - 
+2026-03-18 19:44:48.0116 - ERROR - graphrag.index.validate_config - LLM configuration error detected.
+litellm.NotFoundError: GeminiException - 
+2026-03-18 19:44:48.0116 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini/gemini-2.5-lite: {
+  "attempted_request_count": 1,
+  "successful_response_count": 0,
+  "failed_response_count": 1,
+  "failure_rate": 1.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_per_response_seconds": 0.0,
+  "cache_hit_rate": 0.0,
+  "tokens_per_response": 0.0,
+  "cost_per_response": 0.0
+}
+2026-03-18 19:45:50.0051 - INFO - graphrag.index.validate_config - LLM Config Params Validated
+2026-03-18 19:45:50.0710 - INFO - graphrag.index.validate_config - Embedding LLM Config Params Validated
+2026-03-18 19:45:50.0710 - INFO - graphrag.cli.index - Starting pipeline run. False
+2026-03-18 19:45:50.0711 - INFO - graphrag.cli.index - Using default configuration: {
+    "completion_models": {
+        "default_completion_model": {
+            "type": "litellm",
+            "model_provider": "gemini",
+            "model": "gemini-2.5-flash-lite",
+            "call_args": {},
+            "api_base": null,
+            "api_version": null,
+            "api_key": "==== REDACTED ====",
+            "auth_method": "api_key",
+            "azure_deployment_name": null,
+            "retry": {
+                "type": "exponential_backoff",
+                "max_retries": null,
+                "base_delay": null,
+                "jitter": null,
+                "max_delay": null
+            },
+            "rate_limit": null,
+            "metrics": {
+                "type": "default",
+                "store": "memory",
+                "writer": "log",
+                "log_level": null,
+                "base_dir": null
+            },
+            "mock_responses": []
+        }
+    },
+    "embedding_models": {
+        "default_embedding_model": {
+            "type": "litellm",
+            "model_provider": "gemini",
+            "model": "gemini-embedding-001",
+            "call_args": {},
+            "api_base": null,
+            "api_version": null,
+            "api_key": "==== REDACTED ====",
+            "auth_method": "api_key",
+            "azure_deployment_name": null,
+            "retry": {
+                "type": "exponential_backoff",
+                "max_retries": null,
+                "base_delay": null,
+                "jitter": null,
+                "max_delay": null
+            },
+            "rate_limit": null,
+            "metrics": {
+                "type": "default",
+                "store": "memory",
+                "writer": "log",
+                "log_level": null,
+                "base_dir": null
+            },
+            "mock_responses": []
+        }
+    },
+    "concurrent_requests": 25,
+    "async_mode": "threaded",
+    "input": {
+        "type": "jsonl",
+        "encoding": null,
+        "file_pattern": null,
+        "id_column": null,
+        "title_column": null,
+        "text_column": null
+    },
+    "input_storage": {
+        "type": "file",
+        "encoding": null,
+        "base_dir": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/input",
+        "account_url": null,
+        "database_name": null
+    },
+    "chunking": {
+        "type": "tokens",
+        "encoding_model": "o200k_base",
+        "size": 800,
+        "overlap": 80,
+        "prepend_metadata": null
+    },
+    "output_storage": {
+        "type": "file",
+        "encoding": null,
+        "base_dir": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/output",
+        "account_url": null,
+        "database_name": null
+    },
+    "update_output_storage": {
+        "type": "file",
+        "encoding": null,
+        "base_dir": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/update_output",
+        "account_url": null,
+        "database_name": null
+    },
+    "table_provider": {
+        "type": "parquet"
+    },
+    "cache": {
+        "type": "json",
+        "storage": {
+            "type": "file",
+            "encoding": null,
+            "base_dir": "cache",
+            "account_url": null,
+            "database_name": null
+        }
+    },
+    "reporting": {
+        "type": "file",
+        "base_dir": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/logs",
+        "account_url": null
+    },
+    "vector_store": {
+        "type": "lancedb",
+        "db_uri": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/output/lancedb",
+        "url": null,
+        "audience": null,
+        "database_name": null,
+        "vector_size": 3072,
+        "index_schema": {
+            "community_full_content": {
+                "index_name": "community_full_content",
+                "id_field": "id",
+                "vector_field": "vector",
+                "vector_size": 3072,
+                "fields": {}
+            },
+            "text_unit_text": {
+                "index_name": "text_unit_text",
+                "id_field": "id",
+                "vector_field": "vector",
+                "vector_size": 3072,
+                "fields": {}
+            },
+            "entity_description": {
+                "index_name": "entity_description",
+                "id_field": "id",
+                "vector_field": "vector",
+                "vector_size": 3072,
+                "fields": {}
+            }
+        }
+    },
+    "workflows": null,
+    "embed_text": {
+        "embedding_model_id": "default_embedding_model",
+        "model_instance_name": "text_embedding",
+        "batch_size": 16,
+        "batch_max_tokens": 8191,
+        "names": [
+            "entity_description",
+            "community_full_content",
+            "text_unit_text"
+        ]
+    },
+    "extract_graph": {
+        "completion_model_id": "default_completion_model",
+        "model_instance_name": "extract_graph",
+        "prompt": "prompts/extract_graph.txt",
+        "entity_types": [
+            "organization",
+            "person",
+            "geo",
+            "event"
+        ],
+        "max_gleanings": 1
+    },
+    "summarize_descriptions": {
+        "completion_model_id": "default_completion_model",
+        "model_instance_name": "summarize_descriptions",
+        "prompt": "prompts/summarize_descriptions.txt",
+        "max_length": 500,
+        "max_input_tokens": 4000
+    },
+    "extract_graph_nlp": {
+        "normalize_edge_weights": true,
+        "text_analyzer": {
+            "extractor_type": "regex_english",
+            "model_name": "en_core_web_md",
+            "max_word_length": 15,
+            "word_delimiter": " ",
+            "include_named_entities": true,
+            "exclude_nouns": [
+                "stuff",
+                "thing",
+                "things",
+                "bunch",
+                "bit",
+                "bits",
+                "people",
+                "person",
+                "okay",
+                "hey",
+                "hi",
+                "hello",
+                "laughter",
+                "oh"
+            ],
+            "exclude_entity_tags": [
+                "DATE"
+            ],
+            "exclude_pos_tags": [
+                "DET",
+                "PRON",
+                "INTJ",
+                "X"
+            ],
+            "noun_phrase_tags": [
+                "PROPN",
+                "NOUNS"
+            ],
+            "noun_phrase_grammars": {
+                "PROPN,PROPN": "PROPN",
+                "NOUN,NOUN": "NOUNS",
+                "NOUNS,NOUN": "NOUNS",
+                "ADJ,ADJ": "ADJ",
+                "ADJ,NOUN": "NOUNS"
+            }
+        },
+        "concurrent_requests": 25,
+        "async_mode": "threaded"
+    },
+    "prune_graph": {
+        "min_node_freq": 2,
+        "max_node_freq_std": null,
+        "min_node_degree": 1,
+        "max_node_degree_std": null,
+        "min_edge_weight_pct": 40.0,
+        "remove_ego_nodes": true,
+        "lcc_only": false
+    },
+    "cluster_graph": {
+        "max_cluster_size": 10,
+        "use_lcc": true,
+        "seed": 3735928559
+    },
+    "extract_claims": {
+        "enabled": false,
+        "completion_model_id": "default_completion_model",
+        "model_instance_name": "extract_claims",
+        "prompt": "prompts/extract_claims.txt",
+        "description": "Any claims or facts that could be relevant to information discovery.",
+        "max_gleanings": 1
+    },
+    "community_reports": {
+        "completion_model_id": "default_completion_model",
+        "model_instance_name": "community_reporting",
+        "graph_prompt": "prompts/community_report_graph.txt",
+        "text_prompt": "prompts/community_report_text.txt",
+        "max_length": 1200,
+        "max_input_length": 6000
+    },
+    "snapshots": {
+        "embeddings": false,
+        "graphml": false,
+        "raw_graph": false
+    },
+    "local_search": {
+        "prompt": "prompts/local_search_system_prompt.txt",
+        "completion_model_id": "default_completion_model",
+        "embedding_model_id": "default_embedding_model",
+        "text_unit_prop": 0.5,
+        "community_prop": 0.15,
+        "conversation_history_max_turns": 5,
+        "top_k_entities": 10,
+        "top_k_relationships": 10,
+        "max_context_tokens": 12000
+    },
+    "global_search": {
+        "map_prompt": "prompts/global_search_map_system_prompt.txt",
+        "reduce_prompt": "prompts/global_search_reduce_system_prompt.txt",
+        "completion_model_id": "default_completion_model",
+        "knowledge_prompt": "prompts/global_search_knowledge_system_prompt.txt",
+        "max_context_tokens": 12000,
+        "data_max_tokens": 12000,
+        "map_max_length": 1000,
+        "reduce_max_length": 2000,
+        "dynamic_search_threshold": 1,
+        "dynamic_search_keep_parent": false,
+        "dynamic_search_num_repeats": 1,
+        "dynamic_search_use_summary": false,
+        "dynamic_search_max_level": 2
+    },
+    "drift_search": {
+        "prompt": "prompts/drift_search_system_prompt.txt",
+        "reduce_prompt": "prompts/drift_search_reduce_prompt.txt",
+        "completion_model_id": "default_completion_model",
+        "embedding_model_id": "default_embedding_model",
+        "data_max_tokens": 12000,
+        "reduce_max_tokens": null,
+        "reduce_temperature": 0,
+        "reduce_max_completion_tokens": null,
+        "concurrency": 32,
+        "drift_k_followups": 20,
+        "primer_folds": 5,
+        "primer_llm_max_tokens": 12000,
+        "n_depth": 3,
+        "local_search_text_unit_prop": 0.9,
+        "local_search_community_prop": 0.1,
+        "local_search_top_k_mapped_entities": 10,
+        "local_search_top_k_relationships": 10,
+        "local_search_max_data_tokens": 12000,
+        "local_search_temperature": 0,
+        "local_search_top_p": 1,
+        "local_search_n": 1,
+        "local_search_llm_max_gen_tokens": null,
+        "local_search_llm_max_gen_completion_tokens": null
+    },
+    "basic_search": {
+        "prompt": "prompts/basic_search_system_prompt.txt",
+        "completion_model_id": "default_completion_model",
+        "embedding_model_id": "default_embedding_model",
+        "k": 10,
+        "max_context_tokens": 12000
+    }
+}
+2026-03-18 19:45:50.0713 - INFO - graphrag.api.index - Initializing indexing pipeline...
+2026-03-18 19:45:50.0713 - INFO - graphrag.index.workflows.factory - Creating pipeline with workflows: ['load_input_documents', 'create_base_text_units', 'create_final_documents', 'extract_graph', 'finalize_graph', 'extract_covariates', 'create_communities', 'create_final_text_units', 'create_community_reports', 'generate_text_embeddings']
+2026-03-18 19:45:50.0715 - INFO - graphrag.index.run.run_pipeline - Running standard indexing.
+2026-03-18 19:45:50.0717 - INFO - graphrag.index.run.run_pipeline - Executing pipeline...
+2026-03-18 19:45:50.0729 - INFO - graphrag.index.workflows.load_input_documents - Final # of rows loaded: 5
+2026-03-18 19:45:51.0993 - INFO - graphrag.api.index - Workflow load_input_documents completed successfully
+2026-03-18 19:45:52.0003 - INFO - graphrag.index.workflows.create_base_text_units - Workflow started: create_base_text_units
+2026-03-18 19:45:54.0270 - INFO - graphrag.index.workflows.create_base_text_units - Starting chunking process for 5 documents
+2026-03-18 19:45:54.0275 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  1/5
+2026-03-18 19:45:54.0278 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  2/5
+2026-03-18 19:45:54.0280 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  3/5
+2026-03-18 19:45:54.0283 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  4/5
+2026-03-18 19:45:54.0287 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  5/5
+2026-03-18 19:45:54.0291 - INFO - graphrag.index.workflows.create_base_text_units - Workflow completed: create_base_text_units
+2026-03-18 19:45:54.0325 - INFO - graphrag.api.index - Workflow create_base_text_units completed successfully
+2026-03-18 19:45:54.0328 - INFO - graphrag.index.workflows.create_final_documents - Workflow started: create_final_documents
+2026-03-18 19:45:54.0342 - INFO - graphrag.index.workflows.create_final_documents - Workflow completed: create_final_documents
+2026-03-18 19:45:54.0343 - INFO - graphrag.api.index - Workflow create_final_documents completed successfully
+2026-03-18 19:45:54.0343 - INFO - graphrag.index.workflows.extract_graph - Workflow started: extract_graph
+2026-03-18 19:45:57.0659 - ERROR - graphrag_llm.middleware.with_logging - Async request failed with exception=litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2664, in async_completion
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )  # type: ignore
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/logging_utils.py", line 297, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 513, in post
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 469, in post
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Server error '503 Service Unavailable' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=AIzaSyAqj87-0LAsM1hK3fZzviCVLqzdSYdBoz8'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 620, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2673, in async_completion
+    raise VertexAIError(
+    ...<3 lines>...
+    )
+litellm.llms.vertex_ai.common_utils.VertexAIError: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 64, in _request_count_middleware_async
+    return await async_middleware(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 72, in _request_count_middleware_async
+    result = await async_middleware(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_cache.py", line 145, in _cache_middleware_async
+    response = await async_middleware(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 55, in _retry_middleware_async
+    return await retrier.retry_async(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 102, in retry_async
+    return await func(**input_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 80, in _metrics_middleware_async
+    response = await async_middleware(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 290, in _base_completion_async
+    response = await litellm.acompletion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **new_args,
+        ^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 2072, in wrapper_async
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1892, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 639, in acompletion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1502, in exception_type
+    raise ServiceUnavailableError(
+    ...<3 lines>...
+    )
+litellm.exceptions.ServiceUnavailableError: litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+2026-03-18 19:45:57.0693 - ERROR - graphrag.index.operations.extract_graph.graph_extractor - error extracting graph
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2664, in async_completion
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )  # type: ignore
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/logging_utils.py", line 297, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 513, in post
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 469, in post
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Server error '503 Service Unavailable' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=AIzaSyAqj87-0LAsM1hK3fZzviCVLqzdSYdBoz8'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 620, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2673, in async_completion
+    raise VertexAIError(
+    ...<3 lines>...
+    )
+litellm.llms.vertex_ai.common_utils.VertexAIError: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag/index/operations/extract_graph/graph_extractor.py", line 65, in __call__
+    result = await self._process_document(text, entity_types)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag/index/operations/extract_graph/graph_extractor.py", line 104, in _process_document
+    response: LLMCompletionResponse = await self._model.completion_async(
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        messages=messages_builder.build(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )  # type: ignore
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 193, in completion_async
+    response = await self._completion_async(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 64, in _request_count_middleware_async
+    return await async_middleware(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 72, in _request_count_middleware_async
+    result = await async_middleware(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_cache.py", line 145, in _cache_middleware_async
+    response = await async_middleware(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 55, in _retry_middleware_async
+    return await retrier.retry_async(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 102, in retry_async
+    return await func(**input_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 80, in _metrics_middleware_async
+    response = await async_middleware(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 290, in _base_completion_async
+    response = await litellm.acompletion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **new_args,
+        ^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 2072, in wrapper_async
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1892, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 639, in acompletion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1502, in exception_type
+    raise ServiceUnavailableError(
+    ...<3 lines>...
+    )
+litellm.exceptions.ServiceUnavailableError: litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+2026-03-18 19:45:57.0760 - ERROR - graphrag.index.operations.extract_graph.extract_graph - Entity Extraction Error
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2664, in async_completion
+    response = await client.post(
+               ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )  # type: ignore
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/logging_utils.py", line 297, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 513, in post
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/custom_httpx/http_handler.py", line 469, in post
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Server error '503 Service Unavailable' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=AIzaSyAqj87-0LAsM1hK3fZzviCVLqzdSYdBoz8'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 620, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 2673, in async_completion
+    raise VertexAIError(
+    ...<3 lines>...
+    )
+litellm.llms.vertex_ai.common_utils.VertexAIError: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag/index/operations/extract_graph/graph_extractor.py", line 65, in __call__
+    result = await self._process_document(text, entity_types)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag/index/operations/extract_graph/graph_extractor.py", line 104, in _process_document
+    response: LLMCompletionResponse = await self._model.completion_async(
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        messages=messages_builder.build(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )  # type: ignore
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 193, in completion_async
+    response = await self._completion_async(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_logging.py", line 64, in _request_count_middleware_async
+    return await async_middleware(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_request_count.py", line 72, in _request_count_middleware_async
+    result = await async_middleware(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_cache.py", line 145, in _cache_middleware_async
+    response = await async_middleware(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_retries.py", line 55, in _retry_middleware_async
+    return await retrier.retry_async(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/retry/exponential_retry.py", line 102, in retry_async
+    return await func(**input_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/middleware/with_metrics.py", line 80, in _metrics_middleware_async
+    response = await async_middleware(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/graphrag_llm/completion/lite_llm_completion.py", line 290, in _base_completion_async
+    response = await litellm.acompletion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **new_args,
+        ^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 2072, in wrapper_async
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/utils.py", line 1892, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/main.py", line 639, in acompletion
+    raise exception_type(
+          ~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        extra_kwargs=kwargs,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2456, in exception_type
+    raise e
+  File "/Users/joshuaharrell/graphrag-env/lib/python3.13/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1502, in exception_type
+    raise ServiceUnavailableError(
+    ...<3 lines>...
+    )
+litellm.exceptions.ServiceUnavailableError: litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+2026-03-18 19:45:57.0797 - INFO - graphrag.logger.progress - extract graph progress: 1/5
+2026-03-18 19:45:58.0905 - INFO - graphrag.logger.progress - extract graph progress: 2/5
+2026-03-18 19:45:59.0065 - INFO - graphrag.logger.progress - extract graph progress: 3/5
+2026-03-18 19:46:00.0932 - INFO - graphrag.logger.progress - extract graph progress: 4/5
+2026-03-18 19:46:04.0622 - INFO - graphrag.logger.progress - extract graph progress: 5/5
+2026-03-18 19:46:04.0672 - WARNING - graphrag.index.operations.extract_graph.utils - Dropped 17 relationship(s) referencing non-existent entities.
+2026-03-18 19:46:04.0676 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 1/110
+2026-03-18 19:46:04.0676 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 2/110
+2026-03-18 19:46:04.0676 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 3/110
+2026-03-18 19:46:04.0676 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 4/110
+2026-03-18 19:46:04.0676 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 5/110
+2026-03-18 19:46:04.0676 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 6/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 7/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 8/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 9/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 10/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 11/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 12/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 13/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 14/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 15/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 16/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 17/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 18/110
+2026-03-18 19:46:04.0677 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 19/110
+2026-03-18 19:46:04.0678 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 20/110
+2026-03-18 19:46:04.0678 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 21/110
+2026-03-18 19:46:04.0678 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 22/110
+2026-03-18 19:46:04.0678 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 23/110
+2026-03-18 19:46:04.0678 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 24/110
+2026-03-18 19:46:04.0678 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 25/110
+2026-03-18 19:46:04.0679 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 26/110
+2026-03-18 19:46:04.0679 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 27/110
+2026-03-18 19:46:04.0679 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 28/110
+2026-03-18 19:46:04.0679 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 29/110
+2026-03-18 19:46:04.0679 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 30/110
+2026-03-18 19:46:04.0679 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 31/110
+2026-03-18 19:46:04.0696 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 32/110
+2026-03-18 19:46:04.0696 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 33/110
+2026-03-18 19:46:04.0696 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 34/110
+2026-03-18 19:46:04.0697 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 35/110
+2026-03-18 19:46:04.0697 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 36/110
+2026-03-18 19:46:04.0697 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 37/110
+2026-03-18 19:46:04.0697 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 38/110
+2026-03-18 19:46:04.0697 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 39/110
+2026-03-18 19:46:04.0697 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 40/110
+2026-03-18 19:46:04.0697 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 41/110
+2026-03-18 19:46:04.0697 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 42/110
+2026-03-18 19:46:04.0698 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 43/110
+2026-03-18 19:46:04.0698 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 44/110
+2026-03-18 19:46:04.0698 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 45/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 46/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 47/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 48/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 49/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 50/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 51/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 52/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 53/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 54/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 55/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 56/110
+2026-03-18 19:46:04.0699 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 57/110
+2026-03-18 19:46:04.0700 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 58/110
+2026-03-18 19:46:04.0700 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 59/110
+2026-03-18 19:46:04.0700 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 60/110
+2026-03-18 19:46:08.0614 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 61/110
+2026-03-18 19:46:08.0621 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 62/110
+2026-03-18 19:46:08.0621 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 63/110
+2026-03-18 19:46:08.0621 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 64/110
+2026-03-18 19:46:08.0621 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 65/110
+2026-03-18 19:46:08.0621 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 66/110
+2026-03-18 19:46:08.0622 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 67/110
+2026-03-18 19:46:08.0622 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 68/110
+2026-03-18 19:46:08.0622 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 69/110
+2026-03-18 19:46:08.0622 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 70/110
+2026-03-18 19:46:08.0622 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 71/110
+2026-03-18 19:46:08.0622 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 72/110
+2026-03-18 19:46:08.0622 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 73/110
+2026-03-18 19:46:08.0622 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 74/110
+2026-03-18 19:46:08.0623 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 75/110
+2026-03-18 19:46:08.0623 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 76/110
+2026-03-18 19:46:08.0623 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 77/110
+2026-03-18 19:46:08.0623 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 78/110
+2026-03-18 19:46:08.0623 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 79/110
+2026-03-18 19:46:08.0623 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 80/110
+2026-03-18 19:46:08.0623 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 81/110
+2026-03-18 19:46:08.0624 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 82/110
+2026-03-18 19:46:08.0624 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 83/110
+2026-03-18 19:46:08.0624 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 84/110
+2026-03-18 19:46:08.0624 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 85/110
+2026-03-18 19:46:08.0624 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 86/110
+2026-03-18 19:46:08.0624 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 87/110
+2026-03-18 19:46:08.0624 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 88/110
+2026-03-18 19:46:08.0624 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 89/110
+2026-03-18 19:46:08.0625 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 90/110
+2026-03-18 19:46:08.0625 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 91/110
+2026-03-18 19:46:08.0625 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 92/110
+2026-03-18 19:46:08.0625 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 93/110
+2026-03-18 19:46:08.0625 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 94/110
+2026-03-18 19:46:08.0625 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 95/110
+2026-03-18 19:46:08.0625 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 96/110
+2026-03-18 19:46:08.0626 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 97/110
+2026-03-18 19:46:08.0626 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 98/110
+2026-03-18 19:46:08.0627 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 99/110
+2026-03-18 19:46:08.0628 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 100/110
+2026-03-18 19:46:08.0628 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 101/110
+2026-03-18 19:46:08.0628 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 102/110
+2026-03-18 19:46:08.0628 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 103/110
+2026-03-18 19:46:08.0628 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 104/110
+2026-03-18 19:46:08.0628 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 105/110
+2026-03-18 19:46:08.0628 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 106/110
+2026-03-18 19:46:08.0629 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 107/110
+2026-03-18 19:46:08.0629 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 108/110
+2026-03-18 19:46:08.0629 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 109/110
+2026-03-18 19:46:08.0629 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 110/110
+2026-03-18 19:46:08.0660 - INFO - graphrag.index.workflows.extract_graph - Workflow completed: extract_graph
+2026-03-18 19:46:08.0665 - INFO - graphrag.api.index - Workflow extract_graph completed successfully
+2026-03-18 19:46:08.0678 - INFO - graphrag.index.workflows.finalize_graph - Workflow started: finalize_graph
+2026-03-18 19:46:08.0716 - INFO - graphrag.index.workflows.finalize_graph - Workflow completed: finalize_graph
+2026-03-18 19:46:08.0717 - INFO - graphrag.api.index - Workflow finalize_graph completed successfully
+2026-03-18 19:46:08.0718 - INFO - graphrag.index.workflows.extract_covariates - Workflow started: extract_covariates
+2026-03-18 19:46:08.0718 - INFO - graphrag.index.workflows.extract_covariates - Workflow completed: extract_covariates
+2026-03-18 19:46:08.0718 - INFO - graphrag.api.index - Workflow extract_covariates completed successfully
+2026-03-18 19:46:08.0719 - INFO - graphrag.index.workflows.create_communities - Workflow started: create_communities
+2026-03-18 19:46:08.0802 - INFO - graphrag.index.workflows.create_communities - Workflow completed: create_communities
+2026-03-18 19:46:08.0803 - INFO - graphrag.api.index - Workflow create_communities completed successfully
+2026-03-18 19:46:08.0804 - INFO - graphrag.index.workflows.create_final_text_units - Workflow started: create_final_text_units
+2026-03-18 19:46:08.0833 - INFO - graphrag.index.workflows.create_final_text_units - Workflow completed: create_final_text_units
+2026-03-18 19:46:08.0833 - INFO - graphrag.api.index - Workflow create_final_text_units completed successfully
+2026-03-18 19:46:08.0834 - INFO - graphrag.index.workflows.create_community_reports - Workflow started: create_community_reports
+2026-03-18 19:46:08.0880 - INFO - graphrag.index.operations.summarize_communities.graph_context.context_builder - Number of nodes at level=0 => 29
+2026-03-18 19:46:16.0416 - INFO - graphrag.logger.progress - level 0 summarize communities progress: 1/2
+2026-03-18 19:47:18.0380 - INFO - graphrag.logger.progress - level 0 summarize communities progress: 2/2
+2026-03-18 19:47:18.0421 - INFO - graphrag.index.workflows.create_community_reports - Workflow completed: create_community_reports
+2026-03-18 19:47:18.0426 - INFO - graphrag.api.index - Workflow create_community_reports completed successfully
+2026-03-18 19:47:18.0440 - INFO - graphrag.index.workflows.generate_text_embeddings - Workflow started: generate_text_embeddings
+2026-03-18 19:47:18.0462 - INFO - graphrag.index.workflows.generate_text_embeddings - Embedding the following fields: ['entity_description', 'community_full_content', 'text_unit_text']
+2026-03-18 19:47:20.0426 - INFO - graphrag.index.operations.embed_text.run_embed_text - embedding 61 inputs via 61 snippets using 4 batches. max_batch_size=16, batch_max_tokens=8191
+2026-03-18 19:47:22.0116 - INFO - graphrag.logger.progress - generate embeddings progress: 1/4
+2026-03-18 19:47:22.0121 - INFO - graphrag.logger.progress - generate embeddings progress: 2/4
+2026-03-18 19:47:22.0127 - INFO - graphrag.logger.progress - generate embeddings progress: 3/4
+2026-03-18 19:47:22.0129 - INFO - graphrag.logger.progress - generate embeddings progress: 4/4
+2026-03-18 19:47:22.0268 - INFO - graphrag.index.workflows.generate_text_embeddings - Embedded 61 rows for entity_description
+2026-03-18 19:47:22.0291 - INFO - graphrag.index.operations.embed_text.run_embed_text - embedding 2 inputs via 2 snippets using 1 batches. max_batch_size=16, batch_max_tokens=8191
+2026-03-18 19:47:22.0989 - INFO - graphrag.logger.progress - generate embeddings progress: 1/1
+2026-03-18 19:47:23.0000 - INFO - graphrag.index.workflows.generate_text_embeddings - Embedded 2 rows for community_full_content
+2026-03-18 19:47:23.0024 - INFO - graphrag.index.operations.embed_text.run_embed_text - embedding 5 inputs via 5 snippets using 1 batches. max_batch_size=16, batch_max_tokens=8191
+2026-03-18 19:47:23.0926 - INFO - graphrag.logger.progress - generate embeddings progress: 1/1
+2026-03-18 19:47:23.0942 - INFO - graphrag.index.workflows.generate_text_embeddings - Embedded 5 rows for text_unit_text
+2026-03-18 19:47:23.0942 - INFO - graphrag.index.workflows.generate_text_embeddings - Workflow completed: generate_text_embeddings
+2026-03-18 19:47:23.0948 - INFO - graphrag.api.index - Workflow generate_text_embeddings completed successfully
+2026-03-18 19:47:23.0948 - INFO - graphrag.index.run.run_pipeline - Indexing pipeline complete.
+2026-03-18 19:47:23.0951 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini-embedding-001: {
+  "attempted_request_count": 7,
+  "successful_response_count": 7,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 6.929570913314819,
+  "compute_duration_per_response_seconds": 0.9899387019021171,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 7,
+  "prompt_tokens": 5360,
+  "total_tokens": 5360,
+  "tokens_per_response": 765.7142857142857,
+  "responses_with_cost": 7,
+  "input_cost": 0.000804,
+  "total_cost": 0.000804,
+  "cost_per_response": 0.00011485714285714286
+}
+2026-03-18 19:47:23.0951 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini-2.5-flash-lite: {
+  "attempted_request_count": 14,
+  "successful_response_count": 13,
+  "failed_response_count": 1,
+  "failure_rate": 0.07142857142857142,
+  "requests_with_retries": 4,
+  "retries": 8,
+  "retry_rate": 0.36363636363636365,
+  "compute_duration_seconds": 30.99186372756958,
+  "compute_duration_per_response_seconds": 2.3839895175053525,
+  "cache_hit_rate": 0.0,
+  "streaming_responses": 0,
+  "responses_with_tokens": 13,
+  "prompt_tokens": 28701,
+  "completion_tokens": 7389,
+  "total_tokens": 36090,
+  "tokens_per_response": 2776.153846153846,
+  "responses_with_cost": 13,
+  "input_cost": 0.0028700999999999996,
+  "output_cost": 0.0029556,
+  "total_cost": 0.0058257000000000005,
+  "cost_per_response": 0.0004481307692307693
+}
+2026-03-23 21:50:53.0890 - INFO - graphrag.index.validate_config - LLM Config Params Validated
+2026-03-23 21:50:54.0264 - INFO - graphrag.index.validate_config - Embedding LLM Config Params Validated
+2026-03-23 21:50:54.0265 - INFO - graphrag.cli.index - Starting pipeline run. False
+2026-03-23 21:50:54.0266 - INFO - graphrag.cli.index - Using default configuration: {
+    "completion_models": {
+        "default_completion_model": {
+            "type": "litellm",
+            "model_provider": "gemini",
+            "model": "gemini-2.5-flash-lite",
+            "call_args": {},
+            "api_base": null,
+            "api_version": null,
+            "api_key": "==== REDACTED ====",
+            "auth_method": "api_key",
+            "azure_deployment_name": null,
+            "retry": {
+                "type": "exponential_backoff",
+                "max_retries": null,
+                "base_delay": null,
+                "jitter": null,
+                "max_delay": null
+            },
+            "rate_limit": null,
+            "metrics": {
+                "type": "default",
+                "store": "memory",
+                "writer": "log",
+                "log_level": null,
+                "base_dir": null
+            },
+            "mock_responses": []
+        }
+    },
+    "embedding_models": {
+        "default_embedding_model": {
+            "type": "litellm",
+            "model_provider": "gemini",
+            "model": "gemini-embedding-001",
+            "call_args": {},
+            "api_base": null,
+            "api_version": null,
+            "api_key": "==== REDACTED ====",
+            "auth_method": "api_key",
+            "azure_deployment_name": null,
+            "retry": {
+                "type": "exponential_backoff",
+                "max_retries": null,
+                "base_delay": null,
+                "jitter": null,
+                "max_delay": null
+            },
+            "rate_limit": null,
+            "metrics": {
+                "type": "default",
+                "store": "memory",
+                "writer": "log",
+                "log_level": null,
+                "base_dir": null
+            },
+            "mock_responses": []
+        }
+    },
+    "concurrent_requests": 25,
+    "async_mode": "threaded",
+    "input": {
+        "type": "jsonl",
+        "encoding": null,
+        "file_pattern": null,
+        "id_column": null,
+        "title_column": null,
+        "text_column": null
+    },
+    "input_storage": {
+        "type": "file",
+        "encoding": null,
+        "base_dir": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/input",
+        "account_url": null,
+        "database_name": null
+    },
+    "chunking": {
+        "type": "tokens",
+        "encoding_model": "o200k_base",
+        "size": 800,
+        "overlap": 80,
+        "prepend_metadata": null
+    },
+    "output_storage": {
+        "type": "file",
+        "encoding": null,
+        "base_dir": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/output",
+        "account_url": null,
+        "database_name": null
+    },
+    "update_output_storage": {
+        "type": "file",
+        "encoding": null,
+        "base_dir": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/update_output",
+        "account_url": null,
+        "database_name": null
+    },
+    "table_provider": {
+        "type": "parquet"
+    },
+    "cache": {
+        "type": "json",
+        "storage": {
+            "type": "file",
+            "encoding": null,
+            "base_dir": "cache",
+            "account_url": null,
+            "database_name": null
+        }
+    },
+    "reporting": {
+        "type": "file",
+        "base_dir": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/logs",
+        "account_url": null
+    },
+    "vector_store": {
+        "type": "lancedb",
+        "db_uri": "/Users/joshuaharrell/Desktop/CLASS_AlignED_MVP/processed/graphrag_workspace/output/lancedb",
+        "url": null,
+        "audience": null,
+        "database_name": null,
+        "vector_size": 3072,
+        "index_schema": {
+            "community_full_content": {
+                "index_name": "community_full_content",
+                "id_field": "id",
+                "vector_field": "vector",
+                "vector_size": 3072,
+                "fields": {}
+            },
+            "entity_description": {
+                "index_name": "entity_description",
+                "id_field": "id",
+                "vector_field": "vector",
+                "vector_size": 3072,
+                "fields": {}
+            },
+            "text_unit_text": {
+                "index_name": "text_unit_text",
+                "id_field": "id",
+                "vector_field": "vector",
+                "vector_size": 3072,
+                "fields": {}
+            }
+        }
+    },
+    "workflows": null,
+    "embed_text": {
+        "embedding_model_id": "default_embedding_model",
+        "model_instance_name": "text_embedding",
+        "batch_size": 16,
+        "batch_max_tokens": 8191,
+        "names": [
+            "entity_description",
+            "community_full_content",
+            "text_unit_text"
+        ]
+    },
+    "extract_graph": {
+        "completion_model_id": "default_completion_model",
+        "model_instance_name": "extract_graph",
+        "prompt": "prompts/extract_graph.txt",
+        "entity_types": [
+            "organization",
+            "person",
+            "geo",
+            "event"
+        ],
+        "max_gleanings": 1
+    },
+    "summarize_descriptions": {
+        "completion_model_id": "default_completion_model",
+        "model_instance_name": "summarize_descriptions",
+        "prompt": "prompts/summarize_descriptions.txt",
+        "max_length": 500,
+        "max_input_tokens": 4000
+    },
+    "extract_graph_nlp": {
+        "normalize_edge_weights": true,
+        "text_analyzer": {
+            "extractor_type": "regex_english",
+            "model_name": "en_core_web_md",
+            "max_word_length": 15,
+            "word_delimiter": " ",
+            "include_named_entities": true,
+            "exclude_nouns": [
+                "stuff",
+                "thing",
+                "things",
+                "bunch",
+                "bit",
+                "bits",
+                "people",
+                "person",
+                "okay",
+                "hey",
+                "hi",
+                "hello",
+                "laughter",
+                "oh"
+            ],
+            "exclude_entity_tags": [
+                "DATE"
+            ],
+            "exclude_pos_tags": [
+                "DET",
+                "PRON",
+                "INTJ",
+                "X"
+            ],
+            "noun_phrase_tags": [
+                "PROPN",
+                "NOUNS"
+            ],
+            "noun_phrase_grammars": {
+                "PROPN,PROPN": "PROPN",
+                "NOUN,NOUN": "NOUNS",
+                "NOUNS,NOUN": "NOUNS",
+                "ADJ,ADJ": "ADJ",
+                "ADJ,NOUN": "NOUNS"
+            }
+        },
+        "concurrent_requests": 25,
+        "async_mode": "threaded"
+    },
+    "prune_graph": {
+        "min_node_freq": 2,
+        "max_node_freq_std": null,
+        "min_node_degree": 1,
+        "max_node_degree_std": null,
+        "min_edge_weight_pct": 40.0,
+        "remove_ego_nodes": true,
+        "lcc_only": false
+    },
+    "cluster_graph": {
+        "max_cluster_size": 10,
+        "use_lcc": true,
+        "seed": 3735928559
+    },
+    "extract_claims": {
+        "enabled": false,
+        "completion_model_id": "default_completion_model",
+        "model_instance_name": "extract_claims",
+        "prompt": "prompts/extract_claims.txt",
+        "description": "Any claims or facts that could be relevant to information discovery.",
+        "max_gleanings": 1
+    },
+    "community_reports": {
+        "completion_model_id": "default_completion_model",
+        "model_instance_name": "community_reporting",
+        "graph_prompt": "prompts/community_report_graph.txt",
+        "text_prompt": "prompts/community_report_text.txt",
+        "max_length": 1200,
+        "max_input_length": 6000
+    },
+    "snapshots": {
+        "embeddings": false,
+        "graphml": true,
+        "raw_graph": false
+    },
+    "local_search": {
+        "prompt": "prompts/local_search_system_prompt.txt",
+        "completion_model_id": "default_completion_model",
+        "embedding_model_id": "default_embedding_model",
+        "text_unit_prop": 0.5,
+        "community_prop": 0.15,
+        "conversation_history_max_turns": 5,
+        "top_k_entities": 10,
+        "top_k_relationships": 10,
+        "max_context_tokens": 12000
+    },
+    "global_search": {
+        "map_prompt": "prompts/global_search_map_system_prompt.txt",
+        "reduce_prompt": "prompts/global_search_reduce_system_prompt.txt",
+        "completion_model_id": "default_completion_model",
+        "knowledge_prompt": "prompts/global_search_knowledge_system_prompt.txt",
+        "max_context_tokens": 12000,
+        "data_max_tokens": 12000,
+        "map_max_length": 1000,
+        "reduce_max_length": 2000,
+        "dynamic_search_threshold": 1,
+        "dynamic_search_keep_parent": false,
+        "dynamic_search_num_repeats": 1,
+        "dynamic_search_use_summary": false,
+        "dynamic_search_max_level": 2
+    },
+    "drift_search": {
+        "prompt": "prompts/drift_search_system_prompt.txt",
+        "reduce_prompt": "prompts/drift_search_reduce_prompt.txt",
+        "completion_model_id": "default_completion_model",
+        "embedding_model_id": "default_embedding_model",
+        "data_max_tokens": 12000,
+        "reduce_max_tokens": null,
+        "reduce_temperature": 0,
+        "reduce_max_completion_tokens": null,
+        "concurrency": 32,
+        "drift_k_followups": 20,
+        "primer_folds": 5,
+        "primer_llm_max_tokens": 12000,
+        "n_depth": 3,
+        "local_search_text_unit_prop": 0.9,
+        "local_search_community_prop": 0.1,
+        "local_search_top_k_mapped_entities": 10,
+        "local_search_top_k_relationships": 10,
+        "local_search_max_data_tokens": 12000,
+        "local_search_temperature": 0,
+        "local_search_top_p": 1,
+        "local_search_n": 1,
+        "local_search_llm_max_gen_tokens": null,
+        "local_search_llm_max_gen_completion_tokens": null
+    },
+    "basic_search": {
+        "prompt": "prompts/basic_search_system_prompt.txt",
+        "completion_model_id": "default_completion_model",
+        "embedding_model_id": "default_embedding_model",
+        "k": 10,
+        "max_context_tokens": 12000
+    }
+}
+2026-03-23 21:50:54.0267 - INFO - graphrag.api.index - Initializing indexing pipeline...
+2026-03-23 21:50:54.0268 - INFO - graphrag.index.workflows.factory - Creating pipeline with workflows: ['load_input_documents', 'create_base_text_units', 'create_final_documents', 'extract_graph', 'finalize_graph', 'extract_covariates', 'create_communities', 'create_final_text_units', 'create_community_reports', 'generate_text_embeddings']
+2026-03-23 21:50:54.0271 - INFO - graphrag.index.run.run_pipeline - Running standard indexing.
+2026-03-23 21:50:54.0274 - INFO - graphrag.index.run.run_pipeline - Executing pipeline...
+2026-03-23 21:50:54.0285 - INFO - graphrag.index.workflows.load_input_documents - Final # of rows loaded: 5
+2026-03-23 21:50:54.0360 - INFO - graphrag.api.index - Workflow load_input_documents completed successfully
+2026-03-23 21:50:54.0368 - INFO - graphrag.index.workflows.create_base_text_units - Workflow started: create_base_text_units
+2026-03-23 21:50:55.0262 - INFO - graphrag.index.workflows.create_base_text_units - Starting chunking process for 5 documents
+2026-03-23 21:50:55.0267 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  1/5
+2026-03-23 21:50:55.0269 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  2/5
+2026-03-23 21:50:55.0270 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  3/5
+2026-03-23 21:50:55.0272 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  4/5
+2026-03-23 21:50:55.0275 - INFO - graphrag.index.workflows.create_base_text_units - chunker progress:  5/5
+2026-03-23 21:50:55.0279 - INFO - graphrag.index.workflows.create_base_text_units - Workflow completed: create_base_text_units
+2026-03-23 21:50:55.0311 - INFO - graphrag.api.index - Workflow create_base_text_units completed successfully
+2026-03-23 21:50:55.0312 - INFO - graphrag.index.workflows.create_final_documents - Workflow started: create_final_documents
+2026-03-23 21:50:55.0324 - INFO - graphrag.index.workflows.create_final_documents - Workflow completed: create_final_documents
+2026-03-23 21:50:55.0325 - INFO - graphrag.api.index - Workflow create_final_documents completed successfully
+2026-03-23 21:50:55.0325 - INFO - graphrag.index.workflows.extract_graph - Workflow started: extract_graph
+2026-03-23 21:50:56.0667 - INFO - graphrag.logger.progress - extract graph progress: 1/5
+2026-03-23 21:50:56.0669 - INFO - graphrag.logger.progress - extract graph progress: 2/5
+2026-03-23 21:50:56.0671 - INFO - graphrag.logger.progress - extract graph progress: 3/5
+2026-03-23 21:50:56.0674 - INFO - graphrag.logger.progress - extract graph progress: 4/5
+2026-03-23 21:50:59.0420 - INFO - graphrag.logger.progress - extract graph progress: 5/5
+2026-03-23 21:50:59.0465 - WARNING - graphrag.index.operations.extract_graph.utils - Dropped 24 relationship(s) referencing non-existent entities.
+2026-03-23 21:50:59.0468 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 1/135
+2026-03-23 21:50:59.0468 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 2/135
+2026-03-23 21:50:59.0468 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 3/135
+2026-03-23 21:50:59.0468 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 4/135
+2026-03-23 21:50:59.0468 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 5/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 6/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 7/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 8/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 9/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 10/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 11/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 12/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 13/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 14/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 15/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 16/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 17/135
+2026-03-23 21:50:59.0469 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 18/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 19/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 20/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 21/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 22/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 23/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 24/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 25/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 26/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 27/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 28/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 29/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 30/135
+2026-03-23 21:50:59.0470 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 31/135
+2026-03-23 21:50:59.0482 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 32/135
+2026-03-23 21:50:59.0482 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 33/135
+2026-03-23 21:50:59.0482 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 34/135
+2026-03-23 21:50:59.0482 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 35/135
+2026-03-23 21:50:59.0482 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 36/135
+2026-03-23 21:50:59.0482 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 37/135
+2026-03-23 21:50:59.0482 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 38/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 39/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 40/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 41/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 42/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 43/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 44/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 45/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 46/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 47/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 48/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 49/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 50/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 51/135
+2026-03-23 21:50:59.0483 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 52/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 53/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 54/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 55/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 56/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 57/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 58/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 59/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 60/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 61/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 62/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 63/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 64/135
+2026-03-23 21:50:59.0484 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 65/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 66/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 67/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 68/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 69/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 70/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 71/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 72/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 73/135
+2026-03-23 21:50:59.0485 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 74/135
+2026-03-23 21:50:59.0487 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 75/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 76/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 77/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 78/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 79/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 80/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 81/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 82/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 83/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 84/135
+2026-03-23 21:50:59.0490 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 85/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 86/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 87/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 88/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 89/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 90/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 91/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 92/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 93/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 94/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 95/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 96/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 97/135
+2026-03-23 21:50:59.0491 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 98/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 99/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 100/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 101/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 102/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 103/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 104/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 105/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 106/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 107/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 108/135
+2026-03-23 21:50:59.0492 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 109/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 110/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 111/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 112/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 113/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 114/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 115/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 116/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 117/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 118/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 119/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 120/135
+2026-03-23 21:50:59.0493 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 121/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 122/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 123/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 124/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 125/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 126/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 127/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 128/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 129/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 130/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 131/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 132/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 133/135
+2026-03-23 21:50:59.0494 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 134/135
+2026-03-23 21:50:59.0495 - INFO - graphrag.logger.progress - Summarize entity/relationship description progress: 135/135
+2026-03-23 21:50:59.0511 - INFO - graphrag.index.workflows.extract_graph - Workflow completed: extract_graph
+2026-03-23 21:50:59.0512 - INFO - graphrag.api.index - Workflow extract_graph completed successfully
+2026-03-23 21:50:59.0521 - INFO - graphrag.index.workflows.finalize_graph - Workflow started: finalize_graph
+2026-03-23 21:50:59.0568 - INFO - graphrag.index.workflows.finalize_graph - Workflow completed: finalize_graph
+2026-03-23 21:50:59.0568 - INFO - graphrag.api.index - Workflow finalize_graph completed successfully
+2026-03-23 21:50:59.0569 - INFO - graphrag.index.workflows.extract_covariates - Workflow started: extract_covariates
+2026-03-23 21:50:59.0569 - INFO - graphrag.index.workflows.extract_covariates - Workflow completed: extract_covariates
+2026-03-23 21:50:59.0569 - INFO - graphrag.api.index - Workflow extract_covariates completed successfully
+2026-03-23 21:50:59.0570 - INFO - graphrag.index.workflows.create_communities - Workflow started: create_communities
+2026-03-23 21:50:59.0638 - INFO - graphrag.index.workflows.create_communities - Workflow completed: create_communities
+2026-03-23 21:50:59.0639 - INFO - graphrag.api.index - Workflow create_communities completed successfully
+2026-03-23 21:50:59.0639 - INFO - graphrag.index.workflows.create_final_text_units - Workflow started: create_final_text_units
+2026-03-23 21:50:59.0667 - INFO - graphrag.index.workflows.create_final_text_units - Workflow completed: create_final_text_units
+2026-03-23 21:50:59.0668 - INFO - graphrag.api.index - Workflow create_final_text_units completed successfully
+2026-03-23 21:50:59.0668 - INFO - graphrag.index.workflows.create_community_reports - Workflow started: create_community_reports
+2026-03-23 21:50:59.0711 - INFO - graphrag.index.operations.summarize_communities.graph_context.context_builder - Number of nodes at level=0 => 29
+2026-03-23 21:51:00.0179 - INFO - graphrag.logger.progress - level 0 summarize communities progress: 1/2
+2026-03-23 21:51:00.0180 - INFO - graphrag.logger.progress - level 0 summarize communities progress: 2/2
+2026-03-23 21:51:00.0191 - INFO - graphrag.index.workflows.create_community_reports - Workflow completed: create_community_reports
+2026-03-23 21:51:00.0193 - INFO - graphrag.api.index - Workflow create_community_reports completed successfully
+2026-03-23 21:51:00.0198 - INFO - graphrag.index.workflows.generate_text_embeddings - Workflow started: generate_text_embeddings
+2026-03-23 21:51:00.0209 - INFO - graphrag.index.workflows.generate_text_embeddings - Embedding the following fields: ['entity_description', 'community_full_content', 'text_unit_text']
+2026-03-23 21:51:00.0542 - INFO - graphrag.index.operations.embed_text.run_embed_text - embedding 75 inputs via 75 snippets using 5 batches. max_batch_size=16, batch_max_tokens=8191
+2026-03-23 21:51:00.0645 - INFO - graphrag.logger.progress - generate embeddings progress: 1/5
+2026-03-23 21:51:00.0734 - INFO - graphrag.logger.progress - generate embeddings progress: 2/5
+2026-03-23 21:51:00.0821 - INFO - graphrag.logger.progress - generate embeddings progress: 3/5
+2026-03-23 21:51:01.0364 - INFO - graphrag.logger.progress - generate embeddings progress: 4/5
+2026-03-23 21:51:01.0541 - INFO - graphrag.logger.progress - generate embeddings progress: 5/5
+2026-03-23 21:51:01.0717 - INFO - graphrag.index.workflows.generate_text_embeddings - Embedded 75 rows for entity_description
+2026-03-23 21:51:01.0740 - INFO - graphrag.index.operations.embed_text.run_embed_text - embedding 2 inputs via 2 snippets using 1 batches. max_batch_size=16, batch_max_tokens=8191
+2026-03-23 21:51:01.0819 - INFO - graphrag.logger.progress - generate embeddings progress: 1/1
+2026-03-23 21:51:01.0831 - INFO - graphrag.index.workflows.generate_text_embeddings - Embedded 2 rows for community_full_content
+2026-03-23 21:51:01.0853 - INFO - graphrag.index.operations.embed_text.run_embed_text - embedding 5 inputs via 5 snippets using 1 batches. max_batch_size=16, batch_max_tokens=8191
+2026-03-23 21:51:02.0024 - INFO - graphrag.logger.progress - generate embeddings progress: 1/1
+2026-03-23 21:51:02.0042 - INFO - graphrag.index.workflows.generate_text_embeddings - Embedded 5 rows for text_unit_text
+2026-03-23 21:51:02.0043 - INFO - graphrag.index.workflows.generate_text_embeddings - Workflow completed: generate_text_embeddings
+2026-03-23 21:51:02.0049 - INFO - graphrag.api.index - Workflow generate_text_embeddings completed successfully
+2026-03-23 21:51:02.0050 - INFO - graphrag.index.run.run_pipeline - Indexing pipeline complete.
+2026-03-23 21:51:02.0051 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini-embedding-001: {
+  "attempted_request_count": 8,
+  "successful_response_count": 8,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 0,
+  "retries": 0,
+  "retry_rate": 0.0,
+  "compute_duration_seconds": 7.005773067474365,
+  "compute_duration_per_response_seconds": 0.8757216334342957,
+  "cached_responses": 5,
+  "cache_hit_rate": 0.625,
+  "streaming_responses": 0,
+  "responses_with_tokens": 8,
+  "prompt_tokens": 5620,
+  "total_tokens": 5620,
+  "tokens_per_response": 702.5,
+  "responses_with_cost": 8,
+  "input_cost": 0.000843,
+  "total_cost": 0.000843,
+  "cost_per_response": 0.000105375
+}
+2026-03-23 21:51:02.0051 - INFO - graphrag_llm.metrics.log_metrics_writer - Metrics for gemini/gemini-2.5-flash-lite: {
+  "attempted_request_count": 14,
+  "successful_response_count": 14,
+  "failed_response_count": 0,
+  "failure_rate": 0.0,
+  "requests_with_retries": 4,
+  "retries": 8,
+  "retry_rate": 0.36363636363636365,
+  "compute_duration_seconds": 34.03143548965454,
+  "compute_duration_per_response_seconds": 2.43081682068961,
+  "cached_responses": 12,
+  "cache_hit_rate": 0.8571428571428571,
+  "streaming_responses": 0,
+  "responses_with_tokens": 14,
+  "prompt_tokens": 31366,
+  "completion_tokens": 8162,
+  "total_tokens": 39528,
+  "tokens_per_response": 2823.4285714285716,
+  "responses_with_cost": 14,
+  "input_cost": 0.0031365999999999994,
+  "output_cost": 0.0032648,
+  "total_cost": 0.006401400000000001,
+  "cost_per_response": 0.0004572428571428572
+}

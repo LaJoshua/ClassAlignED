@@ -1,0 +1,728 @@
+{
+  "doc_id": "a802c5fba7e7",
+  "course": {
+    "title": "Applied Differential Equations",
+    "code": "MATA 621",
+    "term": "Spring 2026"
+  },
+  "learning_outcomes": [
+    {
+      "id": "lo1",
+      "text": "Solve first- and higher-order ordinary differential equations analytically and numerically.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "id": "lo2",
+      "text": "Analyze linear systems using eigenvalues, eigenvectors, and fundamental matrices.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "id": "lo3",
+      "text": "Formulate and solve boundary value problems, including Sturm-Liouville problems.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "id": "lo4",
+      "text": "Apply PDE methods to model practical engineering and science problems (heat, wave, Laplace equations).",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "id": "lo5",
+      "text": "Implement MATLAB solutions for ODE and PDE problems.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "a1",
+      "name": "Mid-term Project",
+      "weight_percent": 30,
+      "evidence": [
+        "1850364b7900"
+      ]
+    },
+    {
+      "id": "a2",
+      "name": "Final Project",
+      "weight_percent": 30,
+      "evidence": [
+        "1850364b7900"
+      ]
+    },
+    {
+      "id": "a3",
+      "name": "Homework",
+      "weight_percent": 40,
+      "evidence": [
+        "1850364b7900"
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "id": "p1",
+      "type": "Homework",
+      "summary": "Homework assignments are due at the end of each class period. No late homework accepted after 24 hours. Discussion with peers is encouraged, but solutions must be written independently. Work must be readable and show all derivation details.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "id": "p2",
+      "type": "Attendance",
+      "summary": "Students must follow the University stipulated attendance policy. Attendance will be taken at the beginning of each virtual class. Students are responsible for timely attendance and informing the instructor of supported excuses.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "id": "p3",
+      "type": "Classroom Decorum",
+      "summary": "Students must remain in the virtual classroom during a class meeting and are not allowed to come in and out unless due to a network issue.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "id": "p4",
+      "type": "Technology Use",
+      "summary": "Cell phones must be in silent/manner mode during virtual class. Specific calculators (TI-82, 83, or 84 series) are allowed during exams; all other electronic devices (cell phones, iPads, laptops, other graphing calculators) are considered cheating on exams.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "id": "p5",
+      "type": "Academic Honesty",
+      "summary": "Students are expected to uphold standards of intellectual and academic integrity. This includes policies against plagiarism (presenting another's work as one's own), cheating (unauthorized assistance), unauthorized collaboration (substantial joint effort without consent), falsification (misrepresenting or fabricating information), and multiple submissions (submitting the same work for credit more than once without consent).",
+      "evidence": [
+        "5da5d1621f57",
+        "b11e6de93b25"
+      ]
+    },
+    {
+      "id": "p6",
+      "type": "Academic Honesty Consequence",
+      "summary": "Any student found in violation of academic honesty will fail the course. Cases may be investigated by the professor or Academic Dean.",
+      "evidence": [
+        "b11e6de93b25"
+      ]
+    },
+    {
+      "id": "p7",
+      "type": "Academic Honesty Appeal",
+      "summary": "Student appeals regarding academic dishonesty can be filed with the Student Review Committee through the Office of the Academic Dean.",
+      "evidence": [
+        "b11e6de93b25"
+      ]
+    },
+    {
+      "id": "p8",
+      "type": "Disability Accommodation",
+      "summary": "The university is committed to providing reasonable accommodations to students with disabilities in accordance with federal legislation (Rehabilitation Act of 1973, ADA). Students are responsible for informing faculty of their need and providing authorized documentation. Contact the instructor personally by the end of the first week of classes for discussion on accommodations.",
+      "evidence": [
+        "b11e6de93b25",
+        "8263319099d9"
+      ]
+    },
+    {
+      "id": "p9",
+      "type": "COVID-19",
+      "summary": "Students should refer to the ECSU Viking Compass Website for the most updated COVID-19 policies and information.",
+      "evidence": [
+        "8263319099d9"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "id": "t1",
+      "name": "Matlab",
+      "evidence": [
+        "c12f51d884f7"
+      ]
+    },
+    {
+      "id": "t2",
+      "name": "TI-82, 83, or 84 series calculator",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source_id": "MATA 621",
+      "target_id": "lo1",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "This learning outcome is listed as an objective for the course.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "lo2",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "This learning outcome is listed as an objective for the course.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "lo3",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "This learning outcome is listed as an objective for the course.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "lo4",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "This learning outcome is listed as an objective for the course.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "lo5",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "This learning outcome is listed as an objective for the course.",
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "a1",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "Mid-term Project is a graded component of the course.",
+      "evidence": [
+        "1850364b7900"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "a2",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "Final Project is a graded component of the course.",
+      "evidence": [
+        "1850364b8900"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "a3",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "Homework is a graded component of the course.",
+      "evidence": [
+        "1850364b7900"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "t1",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "Matlab is listed as required software and explicitly needed for projects and to achieve a learning outcome.",
+      "evidence": [
+        "c12f51d884f7",
+        "240923cdcd16",
+        "e7fd3313bb0f"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "t2",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "Specific TI calculators are explicitly allowed during exams, implying they are a required or strongly recommended tool for assessment.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p1",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus outlines a specific policy regarding homework.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p2",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus outlines a specific policy regarding attendance.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p3",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus outlines a specific policy regarding classroom decorum.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p4",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus outlines a specific policy regarding technology use in the classroom and during exams.",
+      "evidence": [
+        "5da5d1621f57"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p5",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus provides a detailed policy on academic honesty.",
+      "evidence": [
+        "5da5d1621f57",
+        "b11e6de93b25"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p6",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus specifies consequences for academic dishonesty.",
+      "evidence": [
+        "b11e6de93b25"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p7",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus outlines the process for appealing academic dishonesty cases.",
+      "evidence": [
+        "b11e6de93b25"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p8",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus includes an accommodation statement for students with disabilities.",
+      "evidence": [
+        "b11e6de93b25",
+        "8263319099d9"
+      ]
+    },
+    {
+      "source_id": "MATA 621",
+      "target_id": "p9",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course syllabus references current COVID-19 policies.",
+      "evidence": [
+        "8263319099d9"
+      ]
+    },
+    {
+      "source_id": "a1",
+      "target_id": "lo1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Mid-term Project, as a major assessment, would assess students' ability to solve ordinary differential equations.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a1",
+      "target_id": "lo2",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Mid-term Project, as a major assessment, would assess students' ability to analyze linear systems.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a1",
+      "target_id": "lo3",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Mid-term Project, as a major assessment, would assess students' ability to formulate and solve boundary value problems.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a1",
+      "target_id": "lo4",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Mid-term Project, as a major assessment, would assess students' ability to apply PDE methods to model problems.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a1",
+      "target_id": "lo5",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Mid-term Project explicitly requires Matlab code and results, directly measuring the ability to implement MATLAB solutions.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a2",
+      "target_id": "lo1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Project, as a major assessment, would assess students' ability to solve ordinary differential equations.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a2",
+      "target_id": "lo2",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Project, as a major assessment, would assess students' ability to analyze linear systems.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a2",
+      "target_id": "lo3",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Project, as a major assessment, would assess students' ability to formulate and solve boundary value problems.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a2",
+      "target_id": "lo4",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Project, as a major assessment, would assess students' ability to apply PDE methods to model problems.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a2",
+      "target_id": "lo5",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "The Final Project explicitly requires Matlab code and results, directly measuring the ability to implement MATLAB solutions.",
+      "evidence": [
+        "e7fd3313bb0f",
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a3",
+      "target_id": "lo1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Homework assignments reinforce and assess students' ability to solve ordinary differential equations.",
+      "evidence": [
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a3",
+      "target_id": "lo2",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Homework assignments reinforce and assess students' ability to analyze linear systems.",
+      "evidence": [
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a3",
+      "target_id": "lo3",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Homework assignments reinforce and assess students' ability to formulate and solve boundary value problems.",
+      "evidence": [
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a3",
+      "target_id": "lo4",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Homework assignments reinforce and assess students' ability to apply PDE methods to model problems.",
+      "evidence": [
+        "1850364b7900",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "source_id": "a3",
+      "target_id": "lo5",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Given Matlab is a required tool and key learning outcome, it is reasonable that homework assignments would also involve implementing MATLAB solutions.",
+      "evidence": [
+        "1850364b7900",
+        "240923cdcd16",
+        "c12f51d884f7"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec1",
+      "title": "AI as an Explanatory Assistant",
+      "description": "Encourage students to use AI tools (e.g., ChatGPT, Wolfram Alpha) to gain deeper conceptual understanding of complex topics in differential equations, explore alternative explanations, or clarify difficult mathematical concepts. Students should be reminded that AI might hallucinate or provide incorrect answers, requiring critical evaluation.",
+      "supports": [
+        "lo1",
+        "lo2",
+        "lo3",
+        "lo4"
+      ],
+      "constrained_by": [
+        "Transparency",
+        "Integrity",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Over-reliance on AI for understanding without developing own critical thinking",
+        "Potential for AI to provide incorrect or misleading information"
+      ],
+      "mitigations": [
+        "Require students to verify AI outputs with course materials or instructor",
+        "Integrate discussions on AI use and limitations into classroom activities",
+        "Assign tasks that require human critical analysis beyond AI capabilities"
+      ],
+      "evidence": [
+        "240923cdcd16"
+      ]
+    },
+    {
+      "id": "rec2",
+      "title": "AI for Code Debugging and Optimization",
+      "description": "Allow students to use AI tools to help debug their MATLAB code for projects and homework, or to suggest ways to optimize existing code. This leverages AI for a practical, skill-development purpose without solving the core mathematical problem for them.",
+      "supports": [
+        "lo5"
+      ],
+      "constrained_by": [
+        "Integrity",
+        "Transparency",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Students might rely on AI to write code from scratch, hindering their own coding skill development",
+        "Potential for AI to introduce errors or inefficient solutions if not carefully guided"
+      ],
+      "mitigations": [
+        "Set clear guidelines on permissible AI assistance for code generation vs. debugging",
+        "Require students to explain the bugs identified and the AI's role in their resolution",
+        "Focus assessments on understanding the code and mathematical principles rather than just output"
+      ],
+      "evidence": [
+        "240923cdcd16",
+        "e7fd3313bb0f"
+      ]
+    },
+    {
+      "id": "rec3",
+      "title": "AI-Generated Practice and Step-by-Step Guidance",
+      "description": "Students can use AI to generate additional practice problems on specific topics (e.g., first-order ODEs, Laplace transforms) or to provide step-by-step solutions to problems they've already attempted, acting as a private tutor. This reinforces learning without direct assessment manipulation.",
+      "supports": [
+        "lo1",
+        "lo2",
+        "lo3",
+        "lo4"
+      ],
+      "constrained_by": [
+        "Integrity",
+        "Transparency",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Over-reliance on AI for solutions without internalizing the problem-solving process",
+        "Potential for AI to generate flawed problems or incorrect solutions"
+      ],
+      "mitigations": [
+        "Advise students to use this after attempting problems themselves and to critically evaluate AI-generated steps",
+        "Instructors could provide curated AI prompts for effective practice",
+        "Emphasize the importance of understanding the 'why' behind each step"
+      ],
+      "evidence": [
+        "240923cdcd16",
+        "1850364b7900"
+      ]
+    },
+    {
+      "id": "rec4",
+      "title": "AI for Pedagogical Support",
+      "description": "Instructors can use AI tools to brainstorm lesson plans, generate diverse examples for problem sets, or draft quiz questions aligned with learning outcomes. This can enhance teaching efficiency and creativity.",
+      "supports": [
+        "lo1",
+        "lo2",
+        "lo3",
+        "lo4",
+        "lo5"
+      ],
+      "constrained_by": [
+        "FacultyAuthority",
+        "Accountability",
+        "Integrity"
+      ],
+      "risks": [
+        "Generating unoriginal or biased content",
+        "Factual inaccuracies in AI-generated materials",
+        "Over-reliance reducing instructor's own pedagogical innovation"
+      ],
+      "mitigations": [
+        "Instructor must critically review and adapt all AI-generated content",
+        "Use AI as a starting point for ideas, not a final product",
+        "Ensure AI outputs align with course specificities and student needs"
+      ],
+      "evidence": [
+        "c12f51d884f7",
+        "240923cdcd16"
+      ]
+    },
+    {
+      "id": "rec5",
+      "title": "Develop and Communicate Clear AI Usage Policy",
+      "description": "The instructor should develop a clear, explicit policy on the acceptable and unacceptable uses of AI in the course, covering all assessments (homework, projects, exams) and study habits. This policy should be clearly communicated at the start of the semester.",
+      "supports": [],
+      "constrained_by": [
+        "Transparency",
+        "FacultyAuthority",
+        "Accountability",
+        "Integrity"
+      ],
+      "risks": [
+        "Ambiguity in policy leading to unintentional violations",
+        "Students feeling overly restricted or confused about AI use"
+      ],
+      "mitigations": [
+        "Provide specific examples of permissible and impermissible AI use",
+        "Host a dedicated Q&A session at the beginning of the semester",
+        "Integrate the AI policy into the existing academic honesty guidelines"
+      ],
+      "evidence": [
+        "5da5d1621f57",
+        "b11e6de93b25"
+      ]
+    },
+    {
+      "id": "rec6",
+      "title": "Leveraging AI for Enhanced Accessibility",
+      "description": "Encourage students with language barriers or certain learning disabilities to use AI tools for translation, text-to-speech, or simplification of complex texts, helping them access course material more effectively.",
+      "supports": [
+        "lo1",
+        "lo2",
+        "lo3",
+        "lo4",
+        "lo5"
+      ],
+      "constrained_by": [
+        "Privacy",
+        "Transparency",
+        "Accountability",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Inaccurate translations or simplifications impacting understanding",
+        "Privacy concerns with sensitive student information if shared with AI tools"
+      ],
+      "mitigations": [
+        "Recommend trusted and privacy-conscious AI tools",
+        "Advise against inputting personally identifiable information into AI systems",
+        "Emphasize AI as a support, not a replacement for fundamental learning"
+      ],
+      "evidence": [
+        "b11e6de93b25",
+        "8263319099d9"
+      ]
+    },
+    {
+      "id": "rec7",
+      "title": "Adapting Assessments for the AI Era",
+      "description": "Design assessments that minimize the ability for AI to simply 'solve' them, focusing on higher-order thinking, critical analysis, unique problem contexts, oral presentations, or requiring personal reflection and integration of multiple sources.",
+      "supports": [
+        "lo1",
+        "lo2",
+        "lo3",
+        "lo4",
+        "lo5"
+      ],
+      "constrained_by": [
+        "Integrity",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Increased instructor workload in designing novel assessments",
+        "Difficulty in designing truly 'AI-proof' tasks without compromising learning objectives",
+        "Potential for limiting traditional quantitative problem-solving practice"
+      ],
+      "mitigations": [
+        "Incorporate in-class, proctored components for key parts of assessments",
+        "Require detailed explanations of reasoning and methodology, not just final answers",
+        "Use current events, personalized data, or specific course readings in problems that AI cannot easily generalize"
+      ],
+      "evidence": [
+        "1850364b7900"
+      ]
+    },
+    {
+      "id": "rec8",
+      "title": "Foster Ethical AI Dialogue",
+      "description": "Integrate discussions on the ethical implications of AI use in academic settings, including issues of intellectual property, bias, data privacy, and the role of human intellect in an AI-augmented world. This prepares students for responsible AI use beyond the classroom.",
+      "supports": [],
+      "constrained_by": [
+        "Transparency",
+        "Accountability",
+        "Privacy",
+        "Integrity",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Discussions might take valuable time away from subject matter content",
+        "Differing student opinions on AI ethics could lead to complex classroom dynamics"
+      ],
+      "mitigations": [
+        "Dedicate specific, limited time for these discussions within the course schedule",
+        "Provide relevant articles or case studies for students to review beforehand",
+        "Link ethical considerations directly to the course's academic integrity policies"
+      ],
+      "evidence": [
+        "5da5d1621f57",
+        "b11e6de93b25"
+      ]
+    }
+  ]
+}

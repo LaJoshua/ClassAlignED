@@ -1,0 +1,547 @@
+{
+  "doc_id": "c3effd7fac1b",
+  "course": {
+    "title": "Principles of Human Nutrition",
+    "code": "BIOL 369",
+    "term": "Spring Semester 2026"
+  },
+  "learning_outcomes": [
+    {
+      "id": "LO1",
+      "text": "Classify macronutrients and micronutrients and identify common functions and food sources of each.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "LO2",
+      "text": "Describe the recommended levels of intake of macronutrients and micronutrients and how these change through the lifespan and during illness.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "LO3",
+      "text": "Explain how macronutrients and micronutrients are used in physiological processes.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "A1",
+      "name": "Exams",
+      "weight_percent": 0,
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "A2",
+      "name": "Quizzes",
+      "weight_percent": 0,
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "id": "P1",
+      "type": "Syllabus Modification",
+      "summary": "This course syllabus is subject to modification by the instructor during the semester.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "P2",
+      "type": "Grading Scale",
+      "summary": "The grading scale is consistent with university policy: 100-90 = A, 89-80 = B, 79-70 = C, 69-60 = D, Below 60 = F.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "P3",
+      "type": "Attendance",
+      "summary": "Regular and punctual class attendance is essential. Students are responsible for missed material. Exceeding 4 allowable absences may result in an 'F' grade. Consistent late arrival or early departure may be recorded as an absence.",
+      "evidence": [
+        "cd80435783ba",
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "id": "P4",
+      "type": "Late/Missed Assignment",
+      "summary": "Late assignments incur a penalty of ten points per day. Missed assignments or exams receive a zero score.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "id": "P5",
+      "type": "Netiquette",
+      "summary": "Guidelines for online communication including writing in digestible chunks, avoiding all caps, careful use of emojis/humor, assuming best intentions, and respecting differences.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "id": "P6",
+      "type": "Academic Honesty",
+      "summary": "Students are expected to uphold intellectual and academic integrity, with definitions provided for plagiarism, cheating, unauthorized collaboration, falsification, and multiple submissions.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "id": "P7",
+      "type": "Course Withdrawal Limit",
+      "summary": "Students can withdraw from no more than 15 semester hours during their undergraduate career after the drop/add deadline.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "id": "P8",
+      "type": "Disability Accommodation",
+      "summary": "Elizabeth City State University provides accommodations to students with documented disabilities; formal requests must be made through the Office of Student Accessibility & Testing Services.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "id": "P9",
+      "type": "Credit Hour",
+      "summary": "The course is worth 3 credit hours, meaning students are expected to complete 9 hours of work per week in a normal 16-week semester (based on 3 hours work per 1 credit hour).",
+      "evidence": [
+        "cdbcca0811d3",
+        "e8043e6b8798"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "id": "T1",
+      "name": "Canvas",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "T2",
+      "name": "Computer with internet connection",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "T3",
+      "name": "Nutrition for a Changing World: Dietary Guidelines for Americans 2020-2025 & Digital Update 2ed|2022 Jamie Pope; Steven Nizielski (Required Text)",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "LO1",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "The course aims for students to classify macronutrients and micronutrients.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "LO2",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "The course aims for students to describe nutrient intake levels and changes.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "LO3",
+      "relation": "COURSE_HAS_OUTCOME",
+      "rationale": "The course aims for students to explain nutrient physiological processes.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "A1",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "Exams are a stated form of assessment for the course.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "A2",
+      "relation": "COURSE_HAS_ASSESSMENT",
+      "rationale": "Quizzes are a stated form of assessment for the course.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "T1",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "Canvas is used for course information and activities.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "T2",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "A computer with internet connection is required for course access.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "T3",
+      "relation": "COURSE_REQUIRES_TOOL",
+      "rationale": "The specified textbook is a required material for the course.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P1",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The syllabus includes a policy on modifications by the instructor.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P2",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The syllabus outlines the grading scale used for the course.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P3",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course has a detailed attendance policy.",
+      "evidence": [
+        "cd80435783ba",
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P4",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course defines policies for late and missed assignments.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P5",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course provides netiquette guidelines for online interactions.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P6",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course includes a policy on academic honesty.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P7",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course references the university's course withdrawal limit policy.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P8",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course provides information on disability accommodations.",
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "source_id": "c3effd7fac1b",
+      "target_id": "P9",
+      "relation": "COURSE_HAS_POLICY",
+      "rationale": "The course outlines the university's credit hour policy.",
+      "evidence": [
+        "cdbcca0811d3",
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "A1",
+      "target_id": "LO1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Exams are expected to assess students' ability to classify macronutrients and micronutrients.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "A1",
+      "target_id": "LO2",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Exams are expected to assess students' ability to describe recommended intake levels.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "A1",
+      "target_id": "LO3",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Exams are expected to assess students' understanding of nutrient physiological processes.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "A2",
+      "target_id": "LO1",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Quizzes are expected to assess students' ability to classify macronutrients and micronutrients.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "A2",
+      "target_id": "LO2",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Quizzes are expected to assess students' ability to describe recommended intake levels.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "source_id": "A2",
+      "target_id": "LO3",
+      "relation": "ASSESSMENT_MEASURES_OUTCOME",
+      "rationale": "Quizzes are expected to assess students' understanding of nutrient physiological processes.",
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "AI1",
+      "title": "Transparent AI Use in Course Design",
+      "description": "Instructors should clearly disclose in the syllabus (P1) if and how AI tools are used for course material generation or grading assistance to maintain student trust and clarity.",
+      "supports": [],
+      "constrained_by": [
+        "Transparency",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Student confusion about course material origin",
+        "Perception of unfairness if AI assists grading without disclosure",
+        "Lack of understanding regarding AI's role"
+      ],
+      "mitigations": [
+        "Include an explicit AI disclosure statement in the syllabus (P1)",
+        "Discuss AI use during the first class session",
+        "Provide rationale for AI integration"
+      ],
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "AI2",
+      "title": "Promote Ethical Student AI Tool Use",
+      "description": "Provide explicit guidelines (aligned with P6) on acceptable and unacceptable uses of AI tools by students for assignments, research, and studying to prevent academic dishonesty.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3"
+      ],
+      "constrained_by": [
+        "Integrity",
+        "FacultyAuthority",
+        "Accountability"
+      ],
+      "risks": [
+        "Plagiarism or unauthorized assistance (P6)",
+        "Erosion of learning and skill degradation",
+        "Misunderstanding of academic integrity expectations"
+      ],
+      "mitigations": [
+        "Update Academic Honesty Policy (P6) to specifically address AI tool usage",
+        "Provide clear examples of appropriate and inappropriate AI use",
+        "Design assignments that require critical thinking beyond AI capabilities"
+      ],
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "id": "AI3",
+      "title": "Ensure Fairness and Equity in AI-Assisted Assessment",
+      "description": "If AI tools are used to assist with grading or feedback (A1, A2), faculty must critically review AI outputs for bias (P2) and ensure equitable application across all students.",
+      "supports": [
+        "A1",
+        "A2"
+      ],
+      "constrained_by": [
+        "Accountability",
+        "Transparency",
+        "Integrity",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Algorithmic bias leading to unfair or inconsistent grades (P2)",
+        "Exacerbating existing educational inequalities",
+        "Providing inaccurate or unhelpful feedback"
+      ],
+      "mitigations": [
+        "Faculty should remain the final authority on grading (P2)",
+        "Conduct regular bias audits of AI tools used in assessment",
+        "Augment AI feedback with human review and personalized comments"
+      ],
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "AI4",
+      "title": "Protect Student Privacy with AI Tools",
+      "description": "Exercise caution when using AI tools that require student data input (e.g., ADA policy's confidentiality aspect P8), ensuring compliance with university data privacy policies and avoiding sharing sensitive student information with third-party AI.",
+      "supports": [],
+      "constrained_by": [
+        "Privacy",
+        "Accountability"
+      ],
+      "risks": [
+        "Unauthorized data access or breaches",
+        "Misuse of student data by third-party AI providers",
+        "Student discomfort or non-compliance with privacy regulations"
+      ],
+      "mitigations": [
+        "Prioritize university-approved AI tools",
+        "Minimize personal data input into AI systems",
+        "Inform students about data handling practices of AI tools (P8)",
+        "Review privacy policies of all AI tools used"
+      ],
+      "evidence": [
+        "cdbcca0811d3"
+      ]
+    },
+    {
+      "id": "AI5",
+      "title": "Develop AI Literacy and Critical Thinking Skills",
+      "description": "Integrate discussions or activities that help students understand how AI works, its limitations, potential biases, and ethical implications, aligning with the course's goal of expanding knowledge (e8043e6b8798).",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3"
+      ],
+      "constrained_by": [
+        "Transparency",
+        "FacultyAuthority"
+      ],
+      "risks": [
+        "Students blindly trusting AI outputs without critical evaluation",
+        "Inability to discern misinformation generated by AI",
+        "Lack of preparedness for an AI-driven professional world"
+      ],
+      "mitigations": [
+        "Incorporate AI critique and evaluation into assignments",
+        "Facilitate class discussions on AI ethics and societal impact",
+        "Use AI as a learning tool to demonstrate its capabilities and flaws"
+      ],
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "AI6",
+      "title": "Faculty Professional Development in AI Integration",
+      "description": "Encourage and provide opportunities for faculty (e8043e6b8798) to receive training on the effective and responsible integration of AI into their teaching practices, ensuring pedagogical innovation and ethical use.",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "A1",
+        "A2"
+      ],
+      "constrained_by": [
+        "FacultyAuthority",
+        "Accountability"
+      ],
+      "risks": [
+        "Ineffective or irresponsible AI implementation due to lack of knowledge",
+        "Missed opportunities for pedagogical enhancement",
+        "Increased workload for faculty without adequate support"
+      ],
+      "mitigations": [
+        "Offer university-sponsored workshops and training sessions",
+        "Facilitate peer learning and sharing of best practices",
+        "Provide access to curated resources on AI in education"
+      ],
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    },
+    {
+      "id": "AI7",
+      "title": "Adapt Assessment Design for an AI-Enabled World",
+      "description": "Modify assessment (A1, A2) strategies to emphasize higher-order thinking, creativity, problem-solving, and application of knowledge that AI tools currently struggle to fully replicate, thereby reinforcing true learning outcomes (LO1, LO2, LO3).",
+      "supports": [
+        "LO1",
+        "LO2",
+        "LO3"
+      ],
+      "constrained_by": [
+        "FacultyAuthority",
+        "Integrity"
+      ],
+      "risks": [
+        "AI-generated submissions masking true student understanding",
+        "Decreased academic rigor if assessments are easily solvable by AI",
+        "Undermining the value of learning outcomes"
+      ],
+      "mitigations": [
+        "Design process-based assignments requiring iterative steps and reflection",
+        "Incorporate oral presentations, debates, or real-world application projects",
+        "Utilize in-class, supervised, or personalized assessments (A1, A2)"
+      ],
+      "evidence": [
+        "e8043e6b8798"
+      ]
+    }
+  ]
+}
