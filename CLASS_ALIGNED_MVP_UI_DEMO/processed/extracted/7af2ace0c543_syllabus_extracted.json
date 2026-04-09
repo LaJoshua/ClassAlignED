@@ -1,0 +1,222 @@
+{
+  "course": {
+    "title": "BIOL 443, Section D3 \u2013 Principles of Immunology",
+    "code": "BIOL 443",
+    "term": "Fall"
+  },
+  "learning_outcomes": [
+    "Identify and describe the principal components of the human immune system.",
+    "Differentiate between innate and acquired immunity.",
+    "Discuss the role of Phagocytes, T cells, B cells, Complement system, MHC, Immune receptors and Immune Signaling compounds in the immune response.",
+    "Explain the basic immunological concept behind vaccines, allergic reactions, autoimmune responses and Cancer.",
+    "Apply the concepts learned in the course to the study of the development of Covid-19 infections, treatment and vaccine development."
+  ],
+  "assessments": [
+    {
+      "type": "",
+      "description": "",
+      "points": 400,
+      "percentage": 40,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 100,
+      "percentage": 10,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 100,
+      "percentage": 10,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 200,
+      "percentage": 20,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 100,
+      "percentage": 10,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 100,
+      "percentage": 10,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": "10 extra credit",
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": "10 extra credit",
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 10,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 20,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": "10 extra credit",
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 10,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 20,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 10,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 10,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 100,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 100,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 10,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 100,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 10,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 200,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    },
+    {
+      "type": "",
+      "description": "",
+      "points": 100,
+      "percentage": null,
+      "notes": "",
+      "due_date": ""
+    }
+  ],
+  "syllabus_policies": [
+    {
+      "policy_type": "blackboard_usage",
+      "description": "You will need to use this Blackboard Course Shell to post assignments. If you submit an assignment via e-mail without receiving previous permission from me, the assignment will not be graded."
+    },
+    {
+      "policy_type": "participation_attendance",
+      "description": "Participation will be assessed based on your promptness in completing assignments and your adherence to the Due Dates in the course. Attendance will be based on your last date of access to the course as recorded by Blackboard."
+    },
+    {
+      "policy_type": "academic_integrity",
+      "description": "Your participation in Discussion Boards, Journals or Assignments must be original work. I am interested in your words and your opinions, not on a write up from the internet. When material from another source is used you will reference it properly using the format indicated with the assignment."
+    },
+    {
+      "policy_type": "late_work",
+      "description": "I will accept late assignments up until the last day of the class, but you will lose 10% of the total point value of the assignment for every week you are late."
+    },
+    {
+      "policy_type": "attendance",
+      "description": "Attendance will be assessed by the last day of access to the course on blackboard. Students are expected to access the course at least once a week."
+    },
+    {
+      "policy_type": "late_work",
+      "description": "This course will cover a lot of material that relays heavily on class discussions through Discussion Boards. To create those class discussions, it is necessary to keep up with the course deadlines. I will accept late assignments up until the last day of the class, but you will lose 25% of the total point value of the assignment for every week you are late."
+    },
+    {
+      "policy_type": "netiquette",
+      "description": "Write in digestible chunks. Lengthy paragraphs are difficult for readers to digest. Keep your paragraphs short and your writing concise. NO YELLING. When you write in uppercase letters in online communication, it is usually interpreted as yelling. Add some emotion :-). Sometimes it helps communicate the tone of your message when you add an emoticon or emoji. However, only do so as necessary, for it can end up being annoying to readers if you have too many, which is probably the opposite of your intention. Use humor carefully. Sarcasm, in particular, does not translate well in an online environment. It\u2019s best to avoid the potential pitfalls of misunderstood messages. Assume the best intentions. In an online environment, it is easy to misread someone\u2019s tone or intended message. Give your peers and instructor the benefit of the doubt, and ask them to clarify their meaning. We are not the same. Respect differences, and don\u2019t make assumptions. Language matters. Choose your words carefully; avoid using slang, and be kind."
+    }
+  ]
+}

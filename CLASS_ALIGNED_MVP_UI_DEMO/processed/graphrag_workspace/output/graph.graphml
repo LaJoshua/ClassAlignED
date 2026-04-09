@@ -1,0 +1,233 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="weight" attr.type="double" />
+  <graph edgedefault="undirected">
+    <node id="PREETY PANWAR" />
+    <node id="BIOL 443" />
+    <node id="STEM 324" />
+    <node id="ZOOM" />
+    <node id="COVID-19" />
+    <node id="RICHARD A. GOLDSBY" />
+    <node id="THOMAS J. KINDT" />
+    <node id="BARBARA A. OSBORNE" />
+    <node id="JANIS KUBY" />
+    <node id="BIOL 101" />
+    <node id="BIOL 102" />
+    <node id="BIOL 341" />
+    <node id="CHEM 101" />
+    <node id="CHEM 101L" />
+    <node id="CHEM 102" />
+    <node id="CHEM 102L" />
+    <node id="CHEM 301" />
+    <node id="CHEM 301L" />
+    <node id="IMMUNE SYSTEM" />
+    <node id="PHAGOCYTES" />
+    <node id="T CELLS" />
+    <node id="B CELLS" />
+    <node id="COMPLEMENT SYSTEM" />
+    <node id="MHC" />
+    <node id="IMMUNE SIGNALING COMPOUNDS" />
+    <node id="VACCINES" />
+    <node id="ALLERGIC REACTIONS" />
+    <node id="AUTOIMMUNE RESPONSES" />
+    <node id="CANCER" />
+    <node id="POWERPOINT" />
+    <node id="BLACKBOARD" />
+    <node id="UNIT 1" />
+    <node id="CBC ACTIVITY REPORT" />
+    <node id="COURSE FEEDBACK SURVEY" />
+    <node id="UNIT 2" />
+    <node id="COMPLEMENT CASCADE ACTIVITY SCREEN SHOT" />
+    <node id="UNIT 3" />
+    <node id="UNIT 3 SPECIAL ACTIVITY" />
+    <node id="MIDTERM" />
+    <node id="ONLINE LAB REPORTS" />
+    <node id="UNIT 2 QUIZ" />
+    <node id="EXAM FOR UNIT 2" />
+    <node id="UNIT 3 QUIZ" />
+    <node id="EXAM FOR UNIT 3" />
+    <node id="MIDTERM -100 POINTS TBD IN SECOND WEEK OF MARCH AROUND MAR 12" />
+    <node id="UNIT 4 QUIZ" />
+    <node id="UNIT 4" />
+    <node id="UNIT 4 EXAM" />
+    <node id="UNIT 4 SPECIAL ACTIVITY" />
+    <node id="UNIT 5 JOURNAL" />
+    <node id="BLACKBOARD COURSE SHELL" />
+    <node id="TAKE HOME FINAL EXAM" />
+    <node id="ESSAY PORTION OF EXAM" />
+    <node id="MULTIPLE CHOICE EXAM" />
+    <node id="ASSIGNMENTS" />
+    <node id="DISCUSSION BOARDS" />
+    <node id="JOURNALS" />
+    <node id="DUE DATES" />
+    <node id="OFFICE OF STUDENTS WITH DISABILITIES" />
+    <node id="OFFICE OF ACADEMIC AFFAIRS" />
+    <node id="STUDENTS" />
+    <node id="DISCUSSION BOARD ASSIGNMENTS" />
+    <node id="DISCUSSION BOARD" />
+    <edge source="PREETY PANWAR" target="BIOL 443">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="PREETY PANWAR" target="STEM 324">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="PREETY PANWAR" target="ZOOM">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="COVID-19">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="RICHARD A. GOLDSBY">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="THOMAS J. KINDT">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="BARBARA A. OSBORNE">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="JANIS KUBY">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="BIOL 443" target="BIOL 101">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="BIOL 102">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="BIOL 341">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="CHEM 101">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="CHEM 101L">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="CHEM 102">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="CHEM 102L">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="CHEM 301">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="CHEM 301L">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BIOL 443" target="IMMUNE SYSTEM">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="PHAGOCYTES">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="T CELLS">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="B CELLS">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="COMPLEMENT SYSTEM">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="MHC">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="IMMUNE SIGNALING COMPOUNDS">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="VACCINES">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="ALLERGIC REACTIONS">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="AUTOIMMUNE RESPONSES">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="BIOL 443" target="CANCER">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="POWERPOINT" target="BLACKBOARD">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BLACKBOARD" target="STUDENTS">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="UNIT 1" target="CBC ACTIVITY REPORT">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="UNIT 1" target="COURSE FEEDBACK SURVEY">
+      <data key="d0">3.0</data>
+    </edge>
+    <edge source="UNIT 2" target="COMPLEMENT CASCADE ACTIVITY SCREEN SHOT">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="UNIT 2" target="UNIT 2 QUIZ">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="UNIT 2" target="EXAM FOR UNIT 2">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="UNIT 3" target="UNIT 3 SPECIAL ACTIVITY">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="UNIT 3" target="UNIT 3 QUIZ">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="UNIT 3" target="EXAM FOR UNIT 3">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="MIDTERM" target="ONLINE LAB REPORTS">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="MIDTERM" target="MIDTERM -100 POINTS TBD IN SECOND WEEK OF MARCH AROUND MAR 12">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="UNIT 4 QUIZ" target="UNIT 4">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="UNIT 4" target="UNIT 4 EXAM">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="UNIT 4" target="UNIT 4 SPECIAL ACTIVITY">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="UNIT 4 EXAM" target="UNIT 4 SPECIAL ACTIVITY">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="UNIT 4 EXAM" target="ESSAY PORTION OF EXAM">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="UNIT 4 EXAM" target="MULTIPLE CHOICE EXAM">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="UNIT 5 JOURNAL" target="BLACKBOARD COURSE SHELL">
+      <data key="d0">8.0</data>
+    </edge>
+    <edge source="BLACKBOARD COURSE SHELL" target="TAKE HOME FINAL EXAM">
+      <data key="d0">10.0</data>
+    </edge>
+    <edge source="BLACKBOARD COURSE SHELL" target="ASSIGNMENTS">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="ASSIGNMENTS" target="DISCUSSION BOARDS">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="ASSIGNMENTS" target="JOURNALS">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="ASSIGNMENTS" target="DUE DATES">
+      <data key="d0">9.0</data>
+    </edge>
+    <edge source="OFFICE OF STUDENTS WITH DISABILITIES" target="OFFICE OF ACADEMIC AFFAIRS">
+      <data key="d0">5.0</data>
+    </edge>
+    <edge source="STUDENTS" target="DISCUSSION BOARD ASSIGNMENTS">
+      <data key="d0">7.0</data>
+    </edge>
+    <edge source="STUDENTS" target="DISCUSSION BOARD">
+      <data key="d0">7.0</data>
+    </edge>
+  </graph>
+</graphml>

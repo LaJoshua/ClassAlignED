@@ -1,0 +1,27 @@
+{
+  "ai_policy_summary": "The UNC System and Elizabeth City State University (ECSU) adopt a philosophy of responsible AI integration rather than prohibition. AI governance is managed through a layered approach including academic integrity policies, student conduct rules, faculty-level syllabus policies, library and instructional guidance, and IT/data security practices. Faculty are empowered to define acceptable and prohibited AI uses within their courses, with clear communication expected in syllabi. Key principles across UNC and ECSU include human accountability for AI outputs, transparency, protection of data privacy, faculty authority at the course level, and promoting AI literacy.",
+  "allowed_ai_uses": [
+    "AI use defined by faculty in course syllabi and assignment design.",
+    "Responsible integration of AI tools in teaching and learning.",
+    "Utilizing AI for workforce preparation and AI literacy initiatives."
+  ],
+  "restricted_ai_uses": [
+    "Submitting AI-generated material without proper attribution.",
+    "Entering confidential or personal data into AI tools.",
+    "Using AI-generated content without faculty verification."
+  ],
+  "required_disclosures": [
+    "Faculty are encouraged to require disclosure of AI use in student assignments.",
+    "Transparency about AI use in instructional materials and student assignments is encouraged."
+  ],
+  "governance_considerations": [
+    "AI governance follows a distributed framework rather than a single comprehensive regulation.",
+    "Existing academic integrity policies and student conduct rules are primary regulatory frameworks for AI use.",
+    "Faculty have authority at the course level to define AI policies via syllabus statements and assignment design.",
+    "Human accountability for AI outputs is a core principle for both instructors and students.",
+    "Transparency and documentation of AI use are encouraged.",
+    "Protection of confidential and student data is a key consideration, aligning with institutional conduct and IT policies.",
+    "Pedagogical adaptation, including redesigning assessments and incorporating process-based learning and in-class assessments, is recommended.",
+    "Workforce preparation and AI literacy are supported through faculty learning communities and instructional guidance."
+  ]
+}

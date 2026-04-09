@@ -1,0 +1,28 @@
+{
+  "ai_policy_summary": "The UNC System and Elizabeth City State University (ECSU) approach AI integration through a distributed governance framework, emphasizing responsible use rather than prohibition. ECSU primarily manages AI use through existing academic integrity policies, student conduct rules, faculty-level syllabus policies, library guidance, and IT security practices. The UNC System offers strategic direction and shared resources, while individual campuses implement policies locally. Key principles include human accountability for AI outputs, transparency, privacy and data protection, faculty authority at the course level, and the promotion of AI literacy.",
+  "allowed_ai_uses": [
+    "AI can be integrated responsibly into teaching, learning, and research.",
+    "Faculty are encouraged to define appropriate uses of AI in their courses.",
+    "Faculty can embed expectations for AI use in their syllabi.",
+    "AI literacy is supported through Faculty Learning Communities and instructional guidance."
+  ],
+  "restricted_ai_uses": [
+    "Using AI-generated material without proper attribution is considered plagiarism and violates academic integrity policies.",
+    "Entering confidential or personal data into AI tools is cautioned against.",
+    "Students are responsible for evaluating AI outputs and ensuring the accuracy of their submissions."
+  ],
+  "required_disclosures": [
+    "Faculty are encouraged to require disclosure of AI use in student assignments.",
+    "Transparency about AI use in both instructional materials and student assignments is encouraged.",
+    "Faculty must clearly communicate expectations regarding AI use in syllabi."
+  ],
+  "governance_considerations": [
+    "AI governance is managed through a distributed framework, not a single comprehensive regulation.",
+    "ECSU relies on existing academic integrity policies, student conduct rules, and faculty-level syllabus policies.",
+    "Faculty have authority at the course level to define AI policies.",
+    "Transparency and documentation of AI use are encouraged.",
+    "Privacy and data protection are addressed through institutional conduct and IT policies, aligning with guidance to avoid sensitive data in AI systems.",
+    "Pedagogical adaptation, including redesigning assessments, is recommended to address AI capabilities.",
+    "Workforce preparation and AI literacy are priorities supported by the UNC System and integrated into instructional programs at ECSU."
+  ]
+}

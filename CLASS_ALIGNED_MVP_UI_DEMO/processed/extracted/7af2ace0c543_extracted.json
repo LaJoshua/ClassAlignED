@@ -1,0 +1,35 @@
+{
+  "course": {
+    "title": "Principles of Immunology",
+    "code": "BIOL 443, Section D3",
+    "term": "Spring 2026"
+  },
+  "learning_outcomes": [
+    "Identify and describe the principal components of the human immune system.",
+    "Differentiate between innate and acquired immunity.",
+    "Discuss the role of Phagocytes, T cells, B cells, Complement system, MHC, Immune receptors and Immune Signaling compounds in the immune response.",
+    "Explain the basic immunological concept behind vaccines, allergic reactions, autoimmune responses and Cancer.",
+    "Apply the concepts learned in the course to the study of the development of Covid-19 infections, treatment and vaccine development."
+  ],
+  "assessments": [
+    "Exams (40% of final grade)",
+    "Midterm Exam (10% of final grade)",
+    "Laboratory Reports (10% of final grade)",
+    "Wikki \u2013 Covid-19 (20% of final grade)",
+    "Participation (10% of final grade)",
+    "Final Exam (10% of final grade)"
+  ],
+  "policies": [
+    "Assignments must be submitted via the Blackboard Course Shell; email submissions without prior permission will not be graded.",
+    "Participation is assessed based on promptness in completing assignments and adherence to due dates. Attendance is based on the last date of access to the course as recorded by Blackboard.",
+    "Participation in Discussion Boards, Journals, or Assignments must be original work; material from other sources must be properly referenced.",
+    "Late assignments will be accepted until the last day of class, but students will lose 25% of the total point value of the assignment for every week they are late.",
+    "Students are expected to access the course at least once a week.",
+    "For reasonable accommodation when absent, students should communicate with the faculty within 48 hours of the absence and be willing to provide evidence upon request; longer notification is allowed with a doctor\u2019s note.",
+    "For long-term absences from a class (more than a week), students need to address concerns with the Office of Students with Disabilities or the Office of Academic Affairs.",
+    "Maintain civility in the online environment by writing in digestible chunks, avoiding all uppercase letters, using emoticons/emojis sparingly, using humor carefully, assuming best intentions, respecting differences, and choosing kind language."
+  ],
+  "recommendations": [
+    "Students should expect to spend between 9 and 10 hours per week working on the course."
+  ]
+}
